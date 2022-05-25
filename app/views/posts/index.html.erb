@@ -1,7 +1,87 @@
-<h1>Posts#index</h1>
-<p>Find me in app/views/posts/index.html.erb</p>
-  <%# deivseのフラッシュメッセージを表示 %>
-  <div class="flash">
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+<%# deivseのフラッシュメッセージを表示 %>
+<div class="flash">
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+</div>
+<%
+=begin%>
+ <% if params[:page].nil? || params[:page] == 1 %>
+  <% breadcrumb :root %>
+<% else %>
+  <% breadcrumb :posts_pagination, params[:page] %>
+<% end %> 
+<%
+=end%>
+
+<div class='title-contents'>
+  <h2 class='service-title'>
+    教員の未来を明るくする教YOU
+  </h2>
+  <p class='service-explain'>
+    教員の業務を教YOU（共有）できる！
+  </p>
+  <p class='service-explain'>
+    教YOU（共有）アプリです
+  </p>
+</div>
+
+<div class='feature-contents'>
+  <h2 class='title'>
+    教YOUの特徴
+  </h2>
+  <ul class='feature-lists'>
+    <li class='list'>
+      <%= image_tag "share.png", class:"list-pict" %>
+      <h3 class='feature-list-text'>
+        授業を教YOU（共有）
+      </h3>
+      <p class='feature-list-description'>
+        多くの授業を共有することで日々の授業作成に悩む時間が無くなります！また、フィードバックをもらい授業のアップデートに繋がることも！
+      </p>
+    </li>
+    <li class='list'>
+      <%= image_tag "connection.png", class:"list-pict" %>
+      <h3 class='feature-list-text'>
+        教員間のネットワーク
+      </h3>
+      <p class='feature-list-description'>
+        繋がりを作り、教員間の何気ない会話も楽しめます！また、授業以外の悩みや不安を共有することで解決に繋がることも！
+      </p>
+    </li>
+    <li class='list'>
+      <%= image_tag "like.png", class:"list-pict" %>
+      <h3 class='feature-list-text'>
+        いいねで授業を保存
+      </h3>
+      <p class='feature-list-description'>
+        お気に入りの授業はいいねで保存できます！
+      </p>
+    </li>
+  </ul>
+</div>
+
+<main class="main">
+  <div class="inner">
+    <div class="greeting">
+      <%
+=begin%>
+ <% if user_signed_in? %>
+        <%= "こんにちは" %>
+        <%= link_to "#{current_user.nickname}", user_path(current_user), class: :greeting__link %>
+        <%= "先生" %>
+      <% end%> 
+    </div>
+
+    <h2 class="page-heading">
+      <%= "みんなの投稿"%>
+    </h2>
+    <div class="card__wrapper">
+      <%= render partial: "post", collection: @posts %>
+    </div>
+    <div class="paginate">
+    <%= paginate @posts %> 
+<%
+=end%>
+    </div>
   </div>
+</main>

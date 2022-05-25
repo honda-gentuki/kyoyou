@@ -1,5 +1,5 @@
 /* 新規登録ページ・ログインページ*/
-.main {
+.container {
   height: 100%;
   width: 100%;
   min-height: 100vh;
@@ -8,7 +8,7 @@
   justify-content: center;
 }
 
-.form-wrap {
+.wrap {
   width: 70%;
   height: 100%;
   background-color: white;
@@ -63,11 +63,11 @@
 }
 
 .any-item {
-background-color: #4C8EB4;
-padding: 5px;
-color: #fff;
-border-radius: 3px;
-opacity: 0.8;
+  background-color: #4C8EB4;
+  padding: 5px;
+  color: #fff;
+  border-radius: 3px;
+  opacity: 0.8;
 }
 
 .input-default {
@@ -82,7 +82,7 @@ opacity: 0.8;
   resize: none;
 }
 
-.form-flex{
+.form-flex {
   display: flex;
   align-items: center;
   margin-top: 20px;
@@ -110,6 +110,7 @@ opacity: 0.8;
   font-size: 14px;
   resize: none;
 }
+
 
 /* フォーム周り */
 .actions{
@@ -167,3 +168,89 @@ opacity: 0.8;
   font-size: 16px;
   resize: none;
 }
+
+
+/* アプリ紹介 */
+.title-contents {
+  width: 100vw;
+  background-image: url('school.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 5vh 15vw;
+  color: #fff;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
+}
+
+.service-title {
+  font-size: 8vh;
+}
+
+.service-explain {
+  font-size: 2.5vh;
+  line-height: 40px;
+}
+
+.list-pict {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+
+/* 特徴 */
+.feature-contents {
+  padding: 5vh 15vw;
+  background-color: #f2f2f2;
+}
+
+.feature-contents>.title {
+  text-align: center;
+  font-size: 3.5vh;
+  font-weight: bold;
+  margin-bottom: 5vh;
+  position: relative;
+}
+
+.feature-contents>.title::after {
+  content: '';
+  width: 70px;
+  height: 4px;
+  background-color: #3ccace;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.feature-lists {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.feature-lists img{
+  height: 200px;
+}
+
+.feature-lists>.list {
+  width: 33vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.feature-list-text {
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 50px;
+}
+
+.feature-list-description {
+  font-size: 18px;
+  margin-top: 20px;
+}
+
