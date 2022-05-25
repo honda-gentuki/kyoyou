@@ -44,7 +44,6 @@ RSpec.describe User, type: :model do
         @user.image = ''
         expect(@user).to be_valid
       end
-
     end
 
     context 'ユーザーが新規登録できないとき' do
