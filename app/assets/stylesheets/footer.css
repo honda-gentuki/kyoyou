@@ -2,11 +2,12 @@
 
 .footer {
   background-color: #2f3131;
-  padding: 15px 0;
+  padding: 25px 0;
 }
 
 .copyright {
   text-align: center;
   color: #fff;
   font-size: 15px;
+  line-height: 25px;
 }
