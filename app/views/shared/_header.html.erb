@@ -1,0 +1,54 @@
+<header class="header">
+  <div class="inner">
+    <div class="nav">
+      <div class="nav-left">
+        <%= link_to image_tag("logo.png", class: :logo), root_path %>
+      </div>
+
+      <div class="search">
+        <%= form_with url: root_path, method: :get, local: true do |f| %>
+          <%= f.text_field :search, class:"input-search", id:"post_form_tag_name", maxlength:"40" %>
+          <%= f.button :type => "submit", class:"search-btn" do %>
+            <i class="fa-solid fa-magnifying-glass"></i>
+          <%end%>
+        <% end %>
+      </div>
+          
+      <% if user_signed_in? %>
+        <div class="nav-right">
+          <%= link_to "投稿する", root_path, class:"nav-btn" %>
+          <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class:"nav-logout" %>
+          <div class="nav-icon">
+            <div class="btn-default">
+              <div class="btn-bell">
+                <%= link_to root_path do %>
+                  <i class="bi bi-bell size"></i>
+                <% end %>
+              </div>
+              <div class="bottom-right">
+              <i class="bi bi-circle-fill"></i>
+                <%
+=begin%>
+ <% if unchecked_notifications.any? %>
+                  
+                <% end %> 
+<%
+=end%>
+              </div>
+            </div>
+            <div class="btn-user">
+              <%= link_to root_path do%>
+                <i class="bi bi-person-circle size"></i>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      <% else %>
+        <div class="nav-right">
+          <%= link_to "ログイン", new_user_session_path, class:"nav-btn" %>
+          <%= link_to "新規登録", new_user_registration_path, class:"nav-btn" %>
+        </div>
+      <% end%>
+    </div>
+  </div>
+</header>
