@@ -7,7 +7,11 @@
       </h1>
     </div>
         
-    <%= render "devise/shared/error_messages", resource: resource %>
+    <%# deivseのフラッシュメッセージを表示 %>
+    <div class="flash">
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+    </div>
 
     <div class="form-group">
       <div class='form-text-wrap'>
