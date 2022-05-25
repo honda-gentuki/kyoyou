@@ -2,7 +2,6 @@
 .main {
   height: 100%;
   width: 100%;
-  min-width: 800px;
   min-height: 100vh;
   background-color: #f4eade;
   display: flex;
