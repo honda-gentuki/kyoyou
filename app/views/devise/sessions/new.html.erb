@@ -1,24 +1,19 @@
-<%= form_with model: @user, url: user_session_path, class: 'container', local: true do |f| %>
-
-  <div class="wrap">
+<%= form_with model: @user, url: user_session_path, class: 'new_user', local: true do |f| %>
+  <div class="form-wrap">
     <div class='form-header'>
       <h1 class='form-header-text'>
       ログイン
       </h1>
     </div>
         
-    <%# deivseのフラッシュメッセージを表示 %>
-    <div class="flash">
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
-    </div>
+    <%= render "devise/shared/error_messages", resource: resource %>
 
     <div class="form-group">
       <div class='form-text-wrap'>
         <label class="form-text">メールアドレス</label>
         <span class="indispensable">必須</span>
       </div>
-      <%= f.email_field :email, class:"input-default", id:"user_email", placeholder:"メールアドレスを入力してください", autofocus: true, autocomplete: "email"%>
+      <%= f.email_field :email, class:"input-default", id:"user_email", placeholder:"PC・携帯どちらでも可", autofocus: true, autocomplete: "email"%>
     </div>
 
     <div class="form-group">
@@ -26,7 +21,7 @@
         <label class="form-text">パスワード</label>
         <span class="indispensable">必須</span>
       </div>
-      <%= f.password_field :password, class:"input-default", id:"user_password", placeholder:"パスワードを入力してください", autocomplete: "current-password" %>
+      <%= f.password_field :password, class:"input-default", id:"user_password", autocomplete: "current-password" %>
     </div>
 
     <div class="actions">
