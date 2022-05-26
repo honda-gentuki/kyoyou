@@ -123,18 +123,130 @@
 }
 
 /* アイコン */
-.bi-gear{
+.bi-gear {
   color: black;
 }
 
-.bi-gear:hover{
+.bi-gear:hover {
   opacity: 0.5;
 }
 
-.bi-chat-dots{
+.bi-chat-dots {
   color: black;
 }
 
-.bi-chat-dots:hover{
+.bi-chat-dots:hover {
   opacity: 0.5;
+}
+
+.post-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bi-trash {
+ margin-left: 15px;
+ color: black;
+}
+
+/* 投稿詳細ページ */
+.post__show__title{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  font-weight: 10;
+  margin: 20px 0;
+}
+
+.table__2{
+  border-collapse: collapse;
+  width: 100%;
+  height: 200px;
+  margin: 0 auto;
+}
+
+.table__col5{
+  text-align: left;
+  font-weight: bold;
+  background: #fafafa;
+  border-collapse: collapse;
+  border: 1px solid #ddd;
+  width: 20%;
+  padding: 8px 8px 8px 15px;
+  height: 20%;
+}
+
+.table__col6{
+  text-align: left;
+  border: 1px solid #ddd;
+  border-collapse: collapse;
+  background-color: #f2f2f2;
+  width: 80%;
+  padding: 16px 15px;
+}
+
+.table__3{
+  border-collapse: collapse;
+  width: 100%;
+  height: 1000px;
+  margin: 0 auto;
+}
+
+.table__col7{
+  text-align: left;
+  font-weight: bold;
+  background: #fafafa;
+  border-collapse: collapse;
+  border: 1px solid #ddd;
+  width: 20%;
+  padding: 8px 8px 8px 15px;
+  height: 20%;
+}
+
+.table__col8{
+  text-align: left;
+  border: 1px solid #ddd;
+  border-collapse: collapse;
+  background-color: #f2f2f2;
+  width: 80%;
+  padding: 16px 15px;
+}
+
+.table__col9{
+  text-align: left;
+  font-weight: bold;
+  background: #fafafa;
+  border-collapse: collapse;
+  border: 1px solid #ddd;
+  width: 20%;
+  padding: 8px 8px 8px 15px;
+  height: 60%;
+}
+
+.table__col10{
+  text-align: left;
+  border: 1px solid #ddd;
+  border-collapse: collapse;
+  background-color: #f2f2f2;
+  width: 80%;
+  padding: 16px 15px;
+  height: 60%
+}
+
+.post__image{
+  width: 100%;
+  margin: 0 auto;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  justify-content: center;
+}
+
+.post__image img{
+  height: 400px;
+  width: auto;
+  margin-bottom: 15px
 }
