@@ -63,9 +63,7 @@
 <main class="main">
   <div class="inner">
     <div class="greeting">
-      <%
-=begin%>
- <% if user_signed_in? %>
+      <% if user_signed_in? %>
         <%= "こんにちは" %>
         <%= link_to "#{current_user.nickname}", user_path(current_user), class: :greeting__link %>
         <%= "先生" %>
@@ -78,10 +76,12 @@
     <div class="card__wrapper">
       <%= render partial: "post", collection: @posts %>
     </div>
-    <div class="paginate">
+    <%
+=begin%>
+ <div class="paginate">
     <%= paginate @posts %> 
+    </div> 
 <%
 =end%>
-    </div>
   </div>
 </main>

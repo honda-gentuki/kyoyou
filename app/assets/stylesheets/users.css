@@ -52,8 +52,8 @@
   font-size: 15px
 }
 
-.card-image img {
-  height: 60%;
+.card-image img{
+  height: 250px;
   width: 250px;
   object-fit: cover;
   border-radius: 150px;

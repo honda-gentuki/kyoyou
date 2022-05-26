@@ -116,6 +116,10 @@
   height: 250px;
 }
 
+#post_images {
+  margin-top: 10px;
+}
+
 /* フォーム周り */
 .actions{
   padding: 40px;

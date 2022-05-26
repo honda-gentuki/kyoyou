@@ -1,0 +1,140 @@
+/* 投稿・投稿カード */
+.card {
+  width: calc((100% - 50px) / 3);
+  margin-bottom: 40px;
+}
+
+.card__body{
+  background-color: #fff;
+  max-height: 450px;
+  width: auto;
+  box-shadow: 5px 5px 5px #ccc;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card__header {
+  display: block;
+  font-size: 16px;
+  color: #999;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.user-image img{ 
+  height: 57px;
+  width: 57px;
+  object-fit: cover;
+  border-radius: 150px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  margin-right: 30px;
+}
+
+.user-image img:hover{
+  opacity: 0.5;
+}
+
+.user__name{
+  margin-right: 40px;
+}
+
+.user__name a{
+  color: black;
+}
+
+.user__name a:hover{
+  opacity: 0.5;
+}
+
+.user__name{
+  margin-right: 40px;
+}
+
+.user__name a{
+  color: black;
+}
+
+.user__name a:hover{
+  opacity: 0.5;
+}
+
+.card__img {
+  margin-bottom: 10px;
+  height: 200px;
+  width: 324px;
+  object-fit: cover;
+  border-bottom: 1px solid #ddd;
+}
+
+.card-img:hover{
+  opacity: 0.5;
+}
+
+.card__name{
+  display: flex;
+  align-items: center;
+  padding: 0 0 10px 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+.card__title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.card__title{
+  color: black;
+  margin-right: 16px;
+}
+
+.card__title a:hover{
+  color: black;
+  opacity: 0.5;
+}
+
+.card__title a:hover{
+  color: black;
+  opacity: 0.5;
+}
+
+.card_sub_title {
+  font-size: 15px;
+  font-weight: bold;
+  color: black;
+}
+
+.card_sub_title a:hover{
+  opacity: 0.5;
+}
+
+.card-footer{
+  display: flex;
+  align-items: center;
+}
+
+.card-footer-flex {
+  display: flex;
+}
+
+/* アイコン */
+.bi-gear{
+  color: black;
+}
+
+.bi-gear:hover{
+  opacity: 0.5;
+}
+
+.bi-chat-dots{
+  color: black;
+}
+
+.bi-chat-dots:hover{
+  opacity: 0.5;
+}

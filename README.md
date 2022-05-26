@@ -41,11 +41,11 @@
 | school_list        | string     | null: false                    |
 | course             | string     | null: false                    |
 | unit               | string     | null: false                    |
-| introduction       | string     |                                |
+| introduction       | string     | null: false                    |
 | introduction_time  | integer    | null: false                    |
-| development        | text       |                                |
+| development        | text       | null: false                    |
 | development_time   | integer    | null: false                    |
-| summary            | text       |                                |
+| summary            | text       | null: false                    |
 | summary_time       | integer    | null: false                    |
 | user               | references | null: false, foreign_key: true |
 

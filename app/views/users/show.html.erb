@@ -18,11 +18,7 @@
             </div>
             <div class="card-image">
               <% if @user.image? %>
-                <%
-=begin%>
- <%= image_tag @user.image.url %> 
-<%
-=end%>
+                <%= image_tag @user.image.url %> 
               <% else %>
                 <%= image_tag("/images/no-image.png") %>
               <% end %>
@@ -104,13 +100,9 @@
       <h2 class="page-heading">
         <%= "#{@user.nickname}先生の投稿"%>
       </h2>
-      <%
-=begin%>
- <div class="user__card">
+      <div class="user__card">
         <%= render partial: 'posts/post', collection: @post %>
       </div> 
-<%
-=end%>
       </div>
     </div>
   </div>
