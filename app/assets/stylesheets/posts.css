@@ -1,3 +1,4 @@
+/* 投稿・投稿カード */
 .card {
   width: calc((100% - 50px) / 3);
   margin-bottom: 40px;
@@ -82,8 +83,19 @@
   border-bottom: 1px solid #ddd;
 }
 
+.card__title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
 .card__title{
+  color: black;
   margin-right: 16px;
+}
+
+.card__title a:hover{
+  color: black;
+  opacity: 0.5;
 }
 
 .card__title a:hover{
@@ -108,4 +120,21 @@
 
 .card-footer-flex {
   display: flex;
+}
+
+/* アイコン */
+.bi-gear{
+  color: black;
+}
+
+.bi-gear:hover{
+  opacity: 0.5;
+}
+
+.bi-chat-dots{
+  color: black;
+}
+
+.bi-chat-dots:hover{
+  opacity: 0.5;
 }
