@@ -21,6 +21,10 @@ class User < ApplicationRecord
     validates :first_name_kana, format: { with: /\A[ァ-ヶー－]+\z/, message: 'には全角カナ文字を使用してください' }
   end
 
+  def already_liked?(post)
+    likes.exists?(post_id: post.id)
+  end
+
   def update_without_current_password(params, *options)
     params.delete(:current_password)
 
