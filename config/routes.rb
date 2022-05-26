@@ -3,5 +3,7 @@ Rails.application.routes.draw do
     controllers: { registrations: 'users/registrations' }
   root to: "posts#index"
   resources :users, only: :show
-  resources :posts
+  resources :posts do
+    resources :comments, only: :create
+  end
 end
