@@ -1,0 +1,117 @@
+<div class="user-main">
+  <div class="inner">
+    <div class="user-wrapper">
+      <div class="flex-row">
+        <div class="h2">
+          <h2 class="page-heading-show">
+            <%= "#{@user.nickname}先生のプロフィール"%>
+          </h2>
+        </div>
+      </div>
+
+      <div class="user-profile">
+        <div class="profile-left">
+          <div class="profile-card">
+            <div class="card-header">
+              <%= "#{@user.nickname}先生" %>
+              <span><%= "(#{@user.age}代" %> <%= "#{@user.sex})" %></span>
+            </div>
+            <div class="card-image">
+              <% if @user.image? %>
+                <%
+=begin%>
+ <%= image_tag @user.image.url %> 
+<%
+=end%>
+              <% else %>
+                <%= image_tag("/images/no-image.png") %>
+              <% end %>
+            </div>
+            <div class="card-footer">
+              <div id="user-follows">
+                <%
+=begin%>
+ <div class="follower">
+                  <%= link_to followers_user_path(@user.id) do %>
+                  <div class="h5" style="color: black;">フォロワー<%= @user.followers.count %>人</div>
+                  <% end %>
+                </div>
+                <div class="follow">
+                  <%= link_to following_user_path(@user.id) do %>
+                    <h5 style="color: black;">フォロー<%= @user.following.count %>人</h5>
+                  <% end %>
+                </div> 
+<%
+=end%>
+              <div class="card-footer-flex"> 
+                <div class="follow-btn">
+                  <%
+=begin%>
+ <%= render "follow_form" %> 
+<%
+=end%>
+                </div> 
+                <div class="chat_btn">
+                  <% if user_signed_in? && current_user.id != @user.id %>
+                    <%
+=begin%>
+ <%= link_to "チャット", chat_path(@user.id), class: :form__btn %> 
+<%
+=end%>
+                  <% end %>
+                </div>
+              </div>
+              <div class="card-footer-flex"> 
+                <div class="edit-btn">
+                  <% if user_signed_in? && @user.id == current_user.id %>
+                    <%= link_to "編集する", edit_user_registration_path(@user), class: :form__btn %>
+                  <% end %>
+                </div>
+                <div class="withdrawal-btn">
+                  <% if user_signed_in? && current_user.id == @user.id %>
+                    <%= link_to '退会', user_registration_path, class: :form__btn, method: :delete, data: { confirm: "アカウントを削除してもよろしいですか？" } %>
+                  <% end %>
+                </div>
+              </div>
+            </div>  
+          </div>
+        </div> 
+        </div>
+        <div class="profile-right">
+          <table class="table">
+            <tbody>
+              <tr>
+                <th class="table__col1", style="border-radius: 5px 0 0 0;">学校名</th>
+                <td class="table__col2", style="border-radius: 0 5px 0 0;"><%= @user.school %></td>
+              </tr>
+              <tr>
+                <th class="table__col1">担当教科</th>
+                <td class="table__col2"><%= @user.subject %></td>
+              </tr>
+              <tr>
+                <th class="table__col1">部活動</th>
+                <td class="table__col2"><%= @user.club %></td>
+              </tr>
+              <tr>
+                <th class="table__col3", style="border-radius: 0 0 0 5px;">自己紹介</th>
+                <td class="table__col4", style="border-radius: 0 0 5px 0;"><%= @user.introduce %></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <h2 class="page-heading">
+        <%= "#{@user.nickname}先生の投稿"%>
+      </h2>
+      <%
+=begin%>
+ <div class="user__card">
+        <%= render partial: 'posts/post', collection: @post %>
+      </div> 
+<%
+=end%>
+      </div>
+    </div>
+  </div>
+</div>
