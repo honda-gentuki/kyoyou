@@ -13,4 +13,29 @@ class User < ApplicationRecord
     validates :last_name_kana, format: { with: /\A[ァ-ヶー－]+\z/, message: 'には全角カナを使用してください' }
     validates :first_name_kana, format: { with: /\A[ァ-ヶー－]+\z/, message: 'には全角カナ文字を使用してください' }
   end
+
+  def update_without_current_password(params, *options)
+    params.delete(:current_password)
+
+    if params[:password].blank? && params[:password_confirmation].blank?
+      params.delete(:password)
+      params.delete(:password_confirmation)
+    end
+
+    result = update(params, *options)
+    clean_up_passwords
+    result
+  end
+  
+  def soft_delete
+    update_attribute(:deleted_at, Time.current)
+  end
+
+  def active_for_authentication?
+    super && !deleted_at
+  end
+
+  def inactive_message
+    !deleted_at ? super : :deleted_account
+  end
 end
