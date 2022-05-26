@@ -16,7 +16,7 @@
           
       <% if user_signed_in? %>
         <div class="nav-right">
-          <%= link_to "投稿する", root_path, class:"nav-btn" %>
+          <%= link_to "投稿する", new_post_path, class:"nav-btn" %>
           <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class:"nav-logout" %>
           <div class="nav-icon">
             <div class="btn-default">
