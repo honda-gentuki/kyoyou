@@ -26,7 +26,7 @@ class User < ApplicationRecord
     clean_up_passwords
     result
   end
-  
+
   def soft_delete
     update_attribute(:deleted_at, Time.current)
   end
