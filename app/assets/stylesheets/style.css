@@ -1,4 +1,4 @@
-/* 新規登録ページ・ログインページ*/
+/* 新規登録ページ・ログインページ・ユーザー情報編集*/
 .container {
   height: 100%;
   width: 100%;
@@ -111,6 +111,10 @@
   resize: none;
 }
 
+
+#user_introduce.input-class{
+  height: 250px;
+}
 
 /* フォーム周り */
 .actions{
@@ -253,3 +257,4 @@
   font-size: 18px;
   margin-top: 20px;
 }
+
