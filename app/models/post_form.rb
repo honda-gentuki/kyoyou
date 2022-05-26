@@ -3,7 +3,7 @@ class PostForm
 
   attr_accessor(
     :id, :school_list, :course, :unit, :introduction, :introduction_time, :development, :development_time, :summary, :summary_time,
-    :user_id, :created_at, :updated_at, :images,
+    :user_id, :created_at, :updated_at, :images
   )
 
   with_options presence: true do
@@ -27,5 +27,4 @@ class PostForm
     post = Post.create(school_list: school_list, course: course, unit: unit, introduction: introduction, introduction_time: introduction_time,
                        development: development, development_time: development_time, summary: summary, summary_time: summary_time, images: images, user_id: user_id)
   end
-
 end
