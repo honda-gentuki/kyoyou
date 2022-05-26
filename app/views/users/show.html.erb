@@ -18,11 +18,7 @@
             </div>
             <div class="card-image">
               <% if @user.image? %>
-                <%
-=begin%>
- <%= image_tag @user.image.url %> 
-<%
-=end%>
+                <%= image_tag @user.image.url %> 
               <% else %>
                 <%= image_tag("/images/no-image.png") %>
               <% end %>
