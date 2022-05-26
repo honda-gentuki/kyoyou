@@ -2,6 +2,7 @@ class PostsController < ApplicationController
   before_action :authenticate_user!, only: :new
   before_action :move_to_index, except: [:index, :show, :edit]
   before_action :set_post, only: [:show, :edit, :update]
+  before_action :set_post_form, only:[:create, :update]
 
   def index
     @users = User.all
@@ -14,7 +15,6 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post_form = PostForm.new(post_form_params)
     if @post_form.valid?
       @post_form.save
       redirect_to root_path
@@ -24,6 +24,22 @@ class PostsController < ApplicationController
   end
 
   def show
+  end
+
+  def edit
+    redirect_to action: :index unless @post.user_id == current_user.id
+    post_attributes = @post.attributes
+    @post_form = PostForm.new(post_attributes)
+  end
+
+  def update
+    @post_form.images ||= @post.images.blobs
+    if @post_form.valid?
+      @post_form.update(post_form_params, @post)
+      redirect_to post_path
+    else
+      render :edit
+    end
   end
 
   private
@@ -39,5 +55,9 @@ class PostsController < ApplicationController
 
   def set_post
     @post = Post.find(params[:id])
+  end
+
+  def set_post_form
+    @post_form = PostForm.new(post_form_params)
   end
 end
