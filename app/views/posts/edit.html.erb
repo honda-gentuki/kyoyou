@@ -1,4 +1,4 @@
-<%= form_with model: @post_form, url: posts_path, method: @post, class: 'container', id: 'new_post', local: true do |f| %>
+<%= form_with model: @post_form, url: post_path(@post.id), method: :patch, class: 'container', id: 'new_post', local: true do |f| %>
   <div class='wrap'>
     <div class='form-header'>
       <h1 class='form-header-text'>
