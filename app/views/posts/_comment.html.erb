@@ -1,0 +1,25 @@
+<% @post.comments.each do |comment| %>
+  <div class="comments-lists">  
+    <div class="comment_list">
+      <%= link_to user_path(comment.user_id) do%>
+        <div class="comment-left">
+          <div class="user-image">
+            <% if comment.user.image? %>
+              <%= image_tag comment.user.image.url %>
+            <% else %>
+              <%= image_tag("/images/no-image.png") %>
+            <% end %>
+          </div>
+          <div class="comment-right">
+            <div class="user-nickname">
+              <%= comment.user.nickname %>
+            </div>
+            <div class="user-introduce">
+              <%= comment.content %>
+            </div>
+          </div>
+        </div>
+      <%end%>
+    </div>
+  </div>
+<% end %>
