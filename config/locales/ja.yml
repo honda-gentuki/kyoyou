@@ -11,7 +11,7 @@ ja:
         first_name_kana: メイ
         last_name_kana: セイ
       post:
-        subject: 教科名
+        school_list: 学校項目
         course: 科目名
         unit: 単元名
         introduction: 導入
