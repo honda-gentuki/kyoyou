@@ -42,11 +42,7 @@
     <div class="card-footer">
       <div class="like-btn">
         <div id="like-btn-<%= post.id %>">
-          <%
-=begin%>
- <%= render 'likes/like', post: post %> 
-<%
-=end%>
+          <%= render 'likes/like', post: post %> 
         </div>
       </div>
       <%= link_to post_path(post.id) do %>
@@ -55,11 +51,7 @@
           <i class="bi bi-chat-dots"></i>
         </div>
         <div class="chat-count">
-          <%
-=begin%>
- <%= post.comments.count %> 
-<%
-=end%>
+          <%= post.comments.count %> 
         </div>
       </div>
       <% end%>
