@@ -6,6 +6,8 @@ class User < ApplicationRecord
 
   has_many :posts, dependent: :destroy
   has_many :comments, dependent: :destroy
+  has_many :likes, dependent: :destroy
+  has_many :posts, through: :likes
 
   mount_uploader :image, ImageUploader
 
@@ -17,6 +19,10 @@ class User < ApplicationRecord
     validates :first_name, format: { with: /\A[ぁ-んァ-ヶ一-龥々ー]+\z/, message: 'には全角文字を使用してください' }
     validates :last_name_kana, format: { with: /\A[ァ-ヶー－]+\z/, message: 'には全角カナを使用してください' }
     validates :first_name_kana, format: { with: /\A[ァ-ヶー－]+\z/, message: 'には全角カナ文字を使用してください' }
+  end
+
+  def already_liked?(post)
+    likes.exists?(post_id: post.id)
   end
 
   def update_without_current_password(params, *options)

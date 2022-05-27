@@ -51,7 +51,7 @@
                   <% if user_signed_in? && current_user.id != @user.id %>
                     <%
 =begin%>
- <%= link_to "チャット", chat_path(@user.id), class: :form__btn %> 
+ <%= link_to "チャット", chat_path(@user.id), class: :form_btn %> 
 <%
 =end%>
                   <% end %>
@@ -60,15 +60,16 @@
               <div class="card-footer-flex"> 
                 <div class="edit-btn">
                   <% if user_signed_in? && @user.id == current_user.id %>
-                    <%= link_to "編集する", edit_user_registration_path(@user), class: :form__btn %>
+                    <%= link_to "編集", edit_user_registration_path(@user), class: :form_btn %>
                   <% end %>
                 </div>
                 <div class="withdrawal-btn">
                   <% if user_signed_in? && current_user.id == @user.id %>
-                    <%= link_to '退会', user_registration_path, class: :form__btn, method: :delete, data: { confirm: "アカウントを削除してもよろしいですか？" } %>
+                    <%= link_to '退会', user_registration_path, class: :form_btn, method: :delete, data: { confirm: "アカウントを削除してもよろしいですか？" } %>
                   <% end %>
                 </div>
               </div>
+                <%= link_to 'いいね一覧ページ', "/users/#{@user.id}/likes" %>
             </div>  
           </div>
         </div> 

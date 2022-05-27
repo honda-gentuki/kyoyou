@@ -1,0 +1,25 @@
+/* いいね周り */
+.flex-likes{
+  display: flex;
+}
+
+.like-btn{
+  margin: 20px;
+}
+
+.likes-icon{
+  margin-right: 20px;
+}
+
+.likes-count{
+  color: #536371;
+  margin-right: 30px;
+}
+
+.bi-suit-heart-fill{
+  color: red;
+}
+
+.bi-suit-heart{
+  color: red;
+}

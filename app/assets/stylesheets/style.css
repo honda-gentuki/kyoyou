@@ -127,7 +127,7 @@
   justify-content: center;
 }
 
-.form__btn{
+.form_btn{
   display: inline-block;
   padding: 0.4em 1.6em;
   font-size: 0.8em;
@@ -142,7 +142,7 @@
   text-align: center;
 }
 
-.form__btn:hover {
+.form_btn:hover {
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
   cursor: pointer;
 }
@@ -262,3 +262,30 @@
   margin-top: 20px;
 }
 
+/* 投稿メイン */
+
+.main {
+  height: 100%;
+  width: 100%;
+  min-width: 800px;
+  min-height: 100vh;
+  background-color: #f4eade;
+}
+
+.greeting{
+  padding-top: 24px;
+}
+
+.greeting a{
+  color: black;
+}
+
+.greeting a:hover{
+  color: black;
+  opacity: 0.7;
+}
+
+.page-heading {
+  font-size: 30px;
+  padding: 28px 0;
+}
