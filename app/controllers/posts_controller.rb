@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :edit]
-  before_action :move_to_index, except: [:index, :show, :edit]
+  before_action :move_to_index, except: [:index, :show, :edit, :search]
   before_action :set_post, only: [:show, :edit, :update]
   before_action :set_post_form, only: [:create, :update]
 
@@ -48,6 +48,12 @@ class PostsController < ApplicationController
     post = Post.find(params[:id])
     post.destroy
     redirect_to root_path
+  end
+
+  def search
+    @users = User.all
+    @posts = Post.all.order('created_at DESC')
+    @posts = @posts.where('school_list LIKE ? OR course LIKE ? OR unit LIKE ? OR introduction LIKE ? OR development LIKE ? OR summary LIKE ?', "%#{params[:search]}%", "%#{params[:search]}%","%#{params[:search]}%","%#{params[:search]}%", "%#{params[:search]}%", "%#{params[:search]}%") if params[:search].present?
   end
 
   private
