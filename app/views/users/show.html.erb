@@ -103,6 +103,9 @@
       <div class="user__card">
         <%= render partial: 'posts/post', collection: @post %>
       </div> 
+      <% if user_signed_in? && @user.id == current_user.id %>
+          <%= link_to 'いいね一覧ページ', "/users/#{@user.id}/likes" %>
+      <% end %>
       </div>
     </div>
   </div>
