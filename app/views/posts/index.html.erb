@@ -76,12 +76,8 @@
     <div class="card__wrapper">
       <%= render partial: "post", collection: @posts %>
     </div>
-    <%
-=begin%>
- <div class="paginate">
-    <%= paginate @posts %> 
-    </div> 
-<%
-=end%>
+    <div class="paginate">
+      <%= paginate @posts %>
+    </div>
   </div>
-</>
+</main>
