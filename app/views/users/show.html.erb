@@ -25,9 +25,7 @@
             </div>
             <div class="card-footer">
               <div id="user-follows">
-                <%
-=begin%>
- <div class="follower">
+                <div class="follower">
                   <%= link_to followers_user_path(@user.id) do %>
                   <div class="h5" style="color: black;">フォロワー<%= @user.followers.count %>人</div>
                   <% end %>
@@ -37,23 +35,13 @@
                     <h5 style="color: black;">フォロー<%= @user.following.count %>人</h5>
                   <% end %>
                 </div> 
-<%
-=end%>
               <div class="card-footer-flex"> 
                 <div class="follow-btn">
-                  <%
-=begin%>
- <%= render "follow_form" %> 
-<%
-=end%>
+                  <%= render "follow_form" %> 
                 </div> 
                 <div class="chat_btn">
                   <% if user_signed_in? && current_user.id != @user.id %>
-                    <%
-=begin%>
- <%= link_to "チャット", chat_path(@user.id), class: :form_btn %> 
-<%
-=end%>
+                    <%= link_to "チャット", chat_path(@user.id), class: :form_btn %> 
                   <% end %>
                 </div>
               </div>
