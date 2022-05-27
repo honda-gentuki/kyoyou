@@ -10,7 +10,7 @@
         </div>
       </div>
     <% end %>
-<% else %>
+  <% else %>
     <%= link_to(post_likes_path(post), method: :post, remote: true, id: :"like-button-#{post.id}") do %>
       <div class="flex-likes">
         <div class= likes-icon>
