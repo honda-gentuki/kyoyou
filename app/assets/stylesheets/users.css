@@ -87,6 +87,15 @@
   line-height: 50px;
 }
 
+/* フォロー */
+.follow-header{
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  border-bottom: 1px solid #f5f5f5;
+}
+
+
 /* プロフィール右 */
 .profile-right {
   width: 100vw;

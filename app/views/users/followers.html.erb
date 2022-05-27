@@ -1,0 +1,32 @@
+<div class="container">
+  <div class='wrap'>
+    <div class='form-header'>
+      <h1 class='form-header-text'>
+        フォロワー
+      </h1>
+    </div>
+    <div>
+      <% @users.each do |user| %>
+        <%= link_to user_path(user) do %>
+          <div class="follow-header">
+            <div class="user-image">
+              <% if user.image? %>
+                <%= image_tag user.image.url %>
+              <% else %>
+                <%= image_tag("/images/no-image.png") %>
+              <% end %>
+            </div>
+            <div class="follow-right">
+              <div class="user-nickname">
+                <%= "#{user.nickname}先生" %>
+              </div>
+              <div class="user-introduce">
+                <%= user.introduce %>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>

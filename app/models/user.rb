@@ -8,6 +8,10 @@ class User < ApplicationRecord
   has_many :comments, dependent: :destroy
   has_many :likes, dependent: :destroy
   has_many :posts, through: :likes
+  has_many :following_relationships, foreign_key: 'follower_id', class_name: 'Relationship', dependent: :destroy
+  has_many :following, through: :following_relationships
+  has_many :follower_relationships, foreign_key: 'following_id', class_name: 'Relationship', dependent: :destroy
+  has_many :followers, through: :follower_relationships
 
   mount_uploader :image, ImageUploader
 
@@ -48,5 +52,17 @@ class User < ApplicationRecord
 
   def inactive_message
     !deleted_at ? super : :deleted_account
+  end
+
+  def following?(user)
+    following_relationships.find_by(following_id: user.id)
+  end
+
+  def follow(user)
+    following_relationships.create!(following_id: user.id)
+  end
+
+  def unfollow(user)
+    following_relationships.find_by(following_id: user.id).destroy
   end
 end
