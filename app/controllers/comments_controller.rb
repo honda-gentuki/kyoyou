@@ -5,9 +5,7 @@ class CommentsController < ApplicationController
     @comment = @post.comments.build(comment_params)
     @comment.user_id = current_user.id
     @comment_post = @comment.post
-    if @comment.save
-      CommentChannel.broadcast_to @post, { comment: @comment, user: @comment.user } if @comment.save
-    end
+    CommentChannel.broadcast_to @post, { comment: @comment, user: @comment.user } if @comment.save && @comment.save
   end
 
   private
