@@ -111,7 +111,6 @@
   resize: none;
 }
 
-
 #user_introduce.input-class{
   height: 250px;
 }
@@ -289,3 +288,9 @@
   font-size: 30px;
   padding: 28px 0;
 }
+
+/* ページネーション */
+.paginate{
+  padding-bottom: 24px;
+}
+
