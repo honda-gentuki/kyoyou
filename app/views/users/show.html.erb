@@ -39,15 +39,11 @@
                 <div class="follow-btn">
                   <%= render "follow_form" %> 
                 </div> 
-                <%
-=begin%>
- <div class="chat_btn">
+                <div class="chat_btn">
                   <% if user_signed_in? && current_user.id != @user.id %>
                     <%= link_to "チャット", chat_path(@user.id), class: :form_btn %> 
                   <% end %>
                 </div> 
-<%
-=end%>
               </div>
               <div class="card-footer-flex"> 
                 <div class="edit-btn">
@@ -62,6 +58,7 @@
                 </div>
               </div>
                 <%= link_to 'いいね一覧ページ', "/users/#{@user.id}/likes" %>
+                <%= link_to 'チャット一覧ページ', chats_path %>
             </div>  
           </div>
         </div> 

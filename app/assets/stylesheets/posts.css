@@ -40,27 +40,32 @@
   opacity: 0.5;
 }
 
-.user__name{
+.user-name{
   margin-right: 40px;
-}
-
-.user__name a{
   color: black;
 }
 
-.user__name a:hover{
+.user-name:hover{
   opacity: 0.5;
 }
 
-.user__name{
-  margin-right: 40px;
-}
-
-.user__name a{
+.user-name a{
   color: black;
 }
 
-.user__name a:hover{
+.user-name a:hover{
+  opacity: 0.5;
+}
+
+.user-name{
+  margin-right: 40px;
+}
+
+.user-name a{
+  color: black;
+}
+
+.user-name a:hover{
   opacity: 0.5;
 }
 

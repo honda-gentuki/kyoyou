@@ -53,7 +53,11 @@ class PostsController < ApplicationController
   def search
     @users = User.all
     @posts = Post.all.order('created_at DESC')
-    @posts = @posts.where('school_list LIKE ? OR course LIKE ? OR unit LIKE ? OR introduction LIKE ? OR development LIKE ? OR summary LIKE ?', "%#{params[:search]}%", "%#{params[:search]}%","%#{params[:search]}%","%#{params[:search]}%", "%#{params[:search]}%", "%#{params[:search]}%") if params[:search].present?
+    if params[:search].present?
+      @posts = @posts.where(
+        'school_list LIKE ? OR course LIKE ? OR unit LIKE ? OR introduction LIKE ? OR development LIKE ? OR summary LIKE ?', "%#{params[:search]}%", "%#{params[:search]}%", "%#{params[:search]}%", "%#{params[:search]}%", "%#{params[:search]}%", "%#{params[:search]}%"
+      )
+    end
   end
 
   private
