@@ -53,4 +53,16 @@ class User < ApplicationRecord
   def inactive_message
     !deleted_at ? super : :deleted_account
   end
+
+  def following?(user)
+    following_relationships.find_by(following_id: user.id)
+  end
+
+  def follow(user)
+    following_relationships.create!(following_id: user.id)
+  end
+
+  def unfollow(user)
+    following_relationships.find_by(following_id: user.id).destroy
+  end
 end
