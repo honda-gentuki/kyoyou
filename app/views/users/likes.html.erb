@@ -1,11 +1,13 @@
-<div class="user_main">
-  <div class="inner">
-    <div class="user__wrapper">
-      <h2 class="page-heading">
-        <%= "#{@user.nickname}先生がいいねした投稿"%>
-      </h2>
-      <div class="user__card">
-        <%= render partial: 'posts/post', collection: @user.posts %>
+<div class="main">
+  <div class="user-main">
+    <div class="inner">
+      <div class="user__wrapper">
+        <h2 class="page-heading">
+          <%= "#{@user.nickname}先生がいいねした投稿"%>
+        </h2>
+        <div class="user__card">
+          <%= render partial: 'posts/post', collection: @user.posts %>
+        </div>
       </div>
     </div>
   </div>
