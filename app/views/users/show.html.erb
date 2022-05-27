@@ -27,23 +27,27 @@
               <div id="user-follows">
                 <div class="follower">
                   <%= link_to followers_user_path(@user.id) do %>
-                  <div class="h5" style="color: black;">フォロワー<%= @user.followers.count %>人</div>
+                  <div class="follower_count" style="color: black;">フォロワー<%= @user.followers.count %>人</div>
                   <% end %>
                 </div>
                 <div class="follow">
                   <%= link_to following_user_path(@user.id) do %>
-                    <h5 style="color: black;">フォロー<%= @user.following.count %>人</h5>
+                    <div class="follow_count" style="color: black;">フォロー<%= @user.following.count %>人</div>
                   <% end %>
                 </div> 
               <div class="card-footer-flex"> 
                 <div class="follow-btn">
                   <%= render "follow_form" %> 
                 </div> 
-                <div class="chat_btn">
+                <%
+=begin%>
+ <div class="chat_btn">
                   <% if user_signed_in? && current_user.id != @user.id %>
                     <%= link_to "チャット", chat_path(@user.id), class: :form_btn %> 
                   <% end %>
-                </div>
+                </div> 
+<%
+=end%>
               </div>
               <div class="card-footer-flex"> 
                 <div class="edit-btn">
