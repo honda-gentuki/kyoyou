@@ -12,6 +12,9 @@ class User < ApplicationRecord
   has_many :following, through: :following_relationships
   has_many :follower_relationships, foreign_key: 'following_id', class_name: 'Relationship', dependent: :destroy
   has_many :followers, through: :follower_relationships
+  has_many :user_rooms, dependent: :destroy
+  has_many :rooms, through: :user_rooms, dependent: :destroy
+  has_many :chats, dependent: :destroy
 
   mount_uploader :image, ImageUploader
 
