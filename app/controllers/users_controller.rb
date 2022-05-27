@@ -3,7 +3,7 @@ class UsersController < ApplicationController
   before_action :set_user, only: [:show, :likes, :following, :followers]
 
   def show
-    @post = Post.where(user_id: current_user.id).includes(:user).order('created_at DESC')
+    @post = Post.where(user_id: current_user.id).includes(:user).order('created_at DESC').page(params[:page]).reverse_order
     @follower_users = @user.followers
     @following_users = @user.following
   end
@@ -25,6 +25,7 @@ class UsersController < ApplicationController
   end
 
   def likes
+    @posts = Post.all.order('created_at DESC').page(params[:page]).reverse_order
   end
 
   private
