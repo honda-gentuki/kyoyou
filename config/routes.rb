@@ -2,7 +2,11 @@ Rails.application.routes.draw do
   devise_for :users, 
     controllers: { registrations: 'users/registrations' }
   root to: "posts#index"
-  resources :users, only: [:index, :show]
+  resources :users, only: [:index, :show] do
+    member do
+      get :following, :followers
+    end
+  end
   get "users/:id/likes" => "users#likes"
   resources :posts do
     resources :comments, only: :create
