@@ -13,6 +13,11 @@
         <%= link_to "#{@post.user.nickname}先生", user_path(@post.user.id) %>
       </div>
       <div class="post-icon">
+        <div class="like-btn">
+          <div id="like-btn-<%= @post.id %>">
+            <%= render 'likes/like', post: @post %> 
+          </div>
+        </div>
         <% if user_signed_in? && current_user.id == @post.user_id %>
           <div class="gear-icon">
             <%= link_to edit_post_path do %>
@@ -24,8 +29,6 @@
               <i class="bi bi-trash"></i>
             <% end %>
           </div>
-        <% else %>
-        いいねボタン表示
         <% end %>
       </div>
     </div>
