@@ -7,16 +7,15 @@ class Post < ApplicationRecord
   has_many :notifications, dependent: :destroy
 
   def create_notification_like!(current_user)
-    temp = Notification.where(["visiter_id = ? and visited_id = ? and post_id = ? and action = ? ", current_user.id, user_id, id, 'like'])
+    temp = Notification.where(['visiter_id = ? and visited_id = ? and post_id = ? and action = ? ', current_user.id, user_id, id,
+                               'like'])
     if temp.blank?
       notification = current_user.active_notifications.new(
         post_id: id,
         visited_id: user_id,
         action: 'like'
       )
-      if notification.visiter_id == notification.visited_id
-        notification.checked = true
-      end
+      notification.checked = true if notification.visiter_id == notification.visited_id
       notification.save if notification.valid?
     end
   end
@@ -36,9 +35,7 @@ class Post < ApplicationRecord
       visited_id: visited_id,
       action: 'comment'
     )
-    if notification.visiter_id == notification.visited_id
-      notification.checked = true
-    end
+    notification.checked = true if notification.visiter_id == notification.visited_id
     notification.save if notification.valid?
   end
 end
