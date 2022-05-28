@@ -1,17 +1,7 @@
-<%# deivseのフラッシュメッセージを表示 %>
 <div class="flash">
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
 </div>
-<%
-=begin%>
- <% if params[:page].nil? || params[:page] == 1 %>
-  <% breadcrumb :root %>
-<% else %>
-  <% breadcrumb :posts_pagination, params[:page] %>
-<% end %> 
-<%
-=end%>
 
 <div class='title-contents'>
   <h2 class='service-title'>

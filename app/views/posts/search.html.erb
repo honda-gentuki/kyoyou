@@ -1,3 +1,8 @@
+<% if params[:page].nil? || params[:page] == 1 %>
+  <% breadcrumb :search %>
+<% else %>
+  <% breadcrumb :posts_pagination, params[:page] %>
+<% end %> 
 <div class="main">
   <div class="user-main">
     <div class="inner">
