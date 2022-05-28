@@ -93,30 +93,31 @@
         <%= image_tag("/images/no-post.png") %>
       <% end %>
     </div>
-
-    <div class="post__show__title">
-      コメント
-    </div>
-    <div class="post-comments">
-      <div id="comments">
-        <div class="h4">＜コメント一覧＞</div>
-          <%= render "comment" %>
-        </div>
+    <div id="comment">
+      <div class="post__show__title">
+        コメント
       </div>
-      <div class="comment-form">
-        <% if user_signed_in? %>
-          <%= form_with model: [@post, @comment], id: "comment-form" do |f| %>
-            <div class="field">
-              <%= f.text_field :content, id:"comment_content", class:"input-comment", placeholder:"コメントを入力してください"%>
-            </div>
-            <div class="actions">
-              <%= f.submit "送信する", class: :form_btn  %>
-            </div>
-          <% end %>
-        <% else %>
-            <strong><p>※※※ コメントの投稿には新規登録/ログインが必要です ※※※</p></strong>
-        <% end %> 
-      </div> 
+      <div class="post-comments">
+        <div id="comments">
+          <div class="h4">＜コメント一覧＞</div>
+            <%= render "comment" %>
+          </div>
+        </div>
+        <div class="comment-form">
+          <% if user_signed_in? %>
+            <%= form_with model: [@post, @comment], id: "comment-form" do |f| %>
+              <div class="field">
+                <%= f.text_field :content, id:"comment_content", class:"input-comment", placeholder:"コメントを入力してください"%>
+              </div>
+              <div class="actions">
+                <%= f.submit "送信する", class: :form_btn  %>
+              </div>
+            <% end %>
+          <% else %>
+              <strong><p>※※※ コメントの投稿には新規登録/ログインが必要です ※※※</p></strong>
+          <% end %> 
+        </div> 
+      </div>
     </div>
   </div>
 </div>
