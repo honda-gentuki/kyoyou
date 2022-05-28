@@ -5,8 +5,11 @@
         <h2 class="page-heading">
           <%= "検索結果"%>
         </h2>
-        <div class="card__wrapper">
+        <div class="card-wrap">
           <%= render partial: "post", collection: @posts %>
+        </div>
+        <div class="paginate">
+          <%= paginate @posts %>
         </div>
       </div>
     </div>

@@ -73,15 +73,11 @@
     <h2 class="page-heading">
       <%= "みんなの投稿"%>
     </h2>
-    <div class="card__wrapper">
+    <div class="card-wrap">
       <%= render partial: "post", collection: @posts %>
     </div>
-    <%
-=begin%>
- <div class="paginate">
-    <%= paginate @posts %> 
-    </div> 
-<%
-=end%>
+    <div class="paginate">
+      <%= paginate @posts %>
+    </div>
   </div>
-</>
+</main>

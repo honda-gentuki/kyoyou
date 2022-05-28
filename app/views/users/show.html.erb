@@ -90,10 +90,9 @@
       <h2 class="page-heading">
         <%= "#{@user.nickname}先生の投稿"%>
       </h2>
-      <div class="user__card">
+      <div class="card-wrap">
         <%= render partial: 'posts/post', collection: @post %>
       </div> 
-      </div>
     </div>
   </div>
 </div>

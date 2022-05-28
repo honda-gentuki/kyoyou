@@ -5,7 +5,7 @@
         <h2 class="page-heading">
           <%= "#{@user.nickname}先生がいいねした投稿"%>
         </h2>
-        <div class="user__card">
+        <div class="card-wrap">
           <%= render partial: 'posts/post', collection: @user.posts %>
         </div>
       </div>

@@ -69,12 +69,12 @@
   height: 20%;
 }
 
-.chat_btn {
+.chat-btn {
   margin-left: 15px;
   color: #fff;
   }
   
-.chat_btn a {
+.chat-btn a {
   color: #fff;
   }
 
@@ -152,9 +152,3 @@
   padding: 16px 15px;
 }
 
-.user__card {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-}
