@@ -132,12 +132,18 @@
 
 .card-footer {
   display: flex;
+  justify-content: space-around;
   align-items: center;
 }
 
 .card-footer-flex {
-  display: flex;
-  
+  display: flex;  
+
+}
+
+.post_created_at {
+  opacity: 0.5;
+  margin: 20px;
 }
 
 /* アイコン */
