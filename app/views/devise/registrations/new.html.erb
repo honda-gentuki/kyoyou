@@ -1,16 +1,16 @@
 <% breadcrumb :user_new %>
 <%= form_with model: @user, url: user_registration_path, class: 'container',local: true do |f| %>
 
-  <div class="flash">
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-  </div>
-
   <div class='wrap'>
     <div class='form-header'>
       <h1 class='form-header-text'>
         新規登録
       </h1>
+    </div>
+
+    <div class="flash">
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
     </div>
 
     <%= render "devise/shared/error_messages", resource: resource %>

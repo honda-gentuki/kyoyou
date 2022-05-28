@@ -1,3 +1,17 @@
+/* フラッシュメッセージ・エラーメッセージ*/
+.flash {
+  margin-left: 5%;
+}
+
+.alert {
+  margin-left: 5%;
+}
+
+#error_explanation {
+  margin-left: 5%;
+}
+
+
 /* 新規登録ページ・ログインページ・ユーザー情報編集*/
 .container {
   height: 100%;
