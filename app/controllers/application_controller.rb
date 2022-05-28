@@ -1,4 +1,7 @@
 class ApplicationController < ActionController::Base
+  config.i18n.default_locale = :ja
+  config.time_zone = 'Tokyo'
+
   before_action :basic_auth
   before_action :configure_permitted_parameters, if: :devise_controller?
 

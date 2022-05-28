@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="wrap">
+    <div class='form-header'>
+      <h1 class='form-header-text'>
+        通知
+      </h1>
+    </div>
+    <% if @notifications.exists? %>
+        <div class="users-index">
+        <%= render @notifications %>
+        </div>
+    <% else %>
+      <div class="not-notification">通知はありません</div>
+    <% end %>
+  </div>
+</div>

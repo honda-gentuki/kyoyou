@@ -21,19 +21,14 @@
           <div class="nav-icon">
             <div class="btn-default">
               <div class="btn-bell">
-                <%= link_to root_path do %>
+                <%= link_to notifications_path do %>
                   <i class="bi bi-bell size"></i>
                 <% end %>
               </div>
               <div class="bottom-right">
-              <i class="bi bi-circle-fill"></i>
-                <%
-=begin%>
- <% if unchecked_notifications.any? %>
-                  
+                <% if unchecked_notifications.any? %>
+                  <i class="bi bi-circle-fill"></i>
                 <% end %> 
-<%
-=end%>
               </div>
             </div>
             <div class="btn-user">
