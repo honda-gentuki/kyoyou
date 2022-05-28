@@ -1,6 +1,6 @@
-<% breadcrumb :user_new %>
 <%= form_with model: @user, url: user_registration_path, class: 'container',local: true do |f| %>
 
+  <%# deivseのフラッシュメッセージを表示 %>
   <div class="flash">
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
