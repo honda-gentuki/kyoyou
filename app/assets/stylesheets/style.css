@@ -176,7 +176,15 @@
   resize: none;
 }
 
+/* パンくず */
+.breadcrumbs a:visited {
+  color: #1b00ee;
+}
 
+.breadcrumbs{
+  background-color: #f4eade;
+  padding: 30px 0 30px 100px;
+}
 /* アプリ紹介 */
 .title-contents {
   width: 100vw;
