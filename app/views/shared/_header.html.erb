@@ -17,7 +17,6 @@
       <% if user_signed_in? %>
         <div class="nav-right">
           <%= link_to "投稿する", new_post_path, class:"nav-btn" %>
-          <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class:"nav-logout" %>
           <div class="nav-icon">
             <div class="btn-default">
               <div class="btn-bell">
@@ -31,11 +30,22 @@
                 <% end %> 
               </div>
             </div>
-            <div class="btn-user">
-              <%= link_to user_path(current_user) do%>
-                <i class="bi bi-person-circle size"></i>
-              <% end %>
-            </div>
+            <ul class="menu-elements">
+              <li id="menu1">
+                <div class="btn-user",>
+                  <i class="bi bi-person-circle size"></i>
+                  <i class="bi bi-caret-down-fill"></i>
+                </div>
+                <ul class="menu1-lists hidden" id="menu1-pull-down">
+                  <li><%= link_to 'マイページ', user_path(current_user) %></li>
+                  <li><%= link_to 'メッセージ', chats_path %></li>
+                  <li><%= link_to 'いいね',  "/users/#{current_user.id}/likes" %></li>
+                  <li><%= link_to 'フォロー', followers_user_path(current_user) %></li>
+                  <li><%= link_to 'フォロワー',following_user_path(current_user) %></li>
+                  <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
+                </ul>
+              </li>
+            </ul>
           </div>
         </div>
       <% else %>
