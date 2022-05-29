@@ -45,16 +45,19 @@
           <%= render 'likes/like', post: post %> 
         </div>
       </div>
-      <%= link_to post_path(post.id) do %>
-        <div class="chat-btn">
-          <div class="chat-icon">
+      <%= link_to post_path(post.id, anchor: "comment") do %>
+        <div class="comment-btn">
+          <div class="comment-icon">
             <i class="bi bi-chat-dots"></i>
           </div>
-          <div class="chat-count">
+          <div class="comment-count">
             <%= post.comments.count %> 
           </div>
         </div>
       <% end%>
+      <div class="post_created_at">
+        <%= " (#{time_ago_in_words(post.created_at)} 前)" %>
+      </div>
     </div> 
   </div>
 </div>

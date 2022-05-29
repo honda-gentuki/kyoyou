@@ -24,46 +24,53 @@
                 <%= image_tag("/images/no-image.png") %>
               <% end %>
             </div>
-            <div class="card-footer">
+            <div class="card_footer">
               <div id="user-follows">
-                <div class="follower">
-                  <%= link_to followers_user_path(@user.id) do %>
-                  <div class="follower_count" style="color: black;">フォロワー<%= @user.followers.count %>人</div>
-                  <% end %>
-                </div>
-                <div class="follow">
-                  <%= link_to following_user_path(@user.id) do %>
-                    <div class="follow_count" style="color: black;">フォロー<%= @user.following.count %>人</div>
-                  <% end %>
-                </div> 
-              <div class="card-footer-flex"> 
-                <div class="follow-btn">
-                  <%= render "follow_form" %> 
-                </div> 
-                <div class="chat_btn">
+                <div class="follow-flex">
+                  <div class="follow-left">
+                    <div class="follow">
+                      <%= link_to following_user_path(@user.id) do %>
+                        <div class="follow_count" style="color: black;">フォロー<%= @user.following.count %>人</div>
+                      <% end %>
+                    </div> 
+                    <div class="follower">
+                      <%= link_to followers_user_path(@user.id) do %>
+                      <div class="follower_count" style="color: black;">フォロワー<%= @user.followers.count %>人</div>
+                      <% end %>
+                    </div>
+                  </div>
                   <% if user_signed_in? && current_user.id != @user.id %>
-                    <%= link_to "チャット", chat_path(@user.id), class: :form_btn %> 
-                  <% end %>
-                </div> 
-              </div>
-              <div class="card-footer-flex"> 
-                <div class="edit-btn">
-                  <% if user_signed_in? && @user.id == current_user.id %>
-                    <%= link_to "編集", edit_user_registration_path(@user), class: :form_btn %>
+                  <div class="follow-right">
+                    <div class="follow-btn">
+                      <%= render "follow_form" %> 
+                    </div> 
+                  </div>
                   <% end %>
                 </div>
-                <div class="withdrawal-btn">
+                <div class="card-footer-flex"> 
                   <% if user_signed_in? && current_user.id == @user.id %>
-                    <%= link_to '退会', user_registration_path, class: :form_btn, method: :delete, data: { confirm: "アカウントを削除してもよろしいですか？" } %>
+                    <%= link_to edit_user_registration_path(@user) do %>
+                      <i class="bi bi-gear-wide-connected"></i>
+                    <% end %>
+                    <%= link_to "/users/#{@user.id}/likes" do %>
+                      <i class="bi bi-clipboard-heart"></i>
+                    <% end %>
+                    <%= link_to chats_path do %>
+                      <i class="bi bi-envelope"></i>
+                    <% end %>
+                  <% elsif user_signed_in? && current_user.id != @user.id %>
+                    <%= link_to "/users/#{@user.id}/likes" do %>
+                      <i class="bi bi-clipboard-heart"></i>
+                    <% end %>
+                    <%= link_to chat_path(@user.id) do %> 
+                      <i class="bi bi-envelope-plus"></i>
+                    <% end %>
                   <% end %>
                 </div>
               </div>
-                <%= link_to 'いいね一覧ページ', "/users/#{@user.id}/likes" %>
-                <%= link_to 'チャット一覧ページ', chats_path %>
             </div>  
           </div>
         </div> 
-        </div>
         <div class="profile-right">
           <table class="table">
             <tbody>

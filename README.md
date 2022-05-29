@@ -29,7 +29,6 @@
 - has_many :user_rooms
 - has_many :rooms, through: :user_rooms
 - has_many :chats
-- has_many :reads
 - has_many :visiter
 - has_many :visited
 
@@ -133,7 +132,6 @@
 ### Association
 
 - has_many :notifications
-- has_many :reads
 - belongs_to :user
 - belongs_to :room
 
@@ -157,16 +155,3 @@
 - belongs_to :chat
 - belongs_to :visiter
 - belongs_to :visited
-
-## reads テーブル
-
-| Column   | Type       | Options                        |
-| -------- | ---------- | ------------------------------ |
-| user     | references | null: false, foreign_key: true |
-| chat     | references | null: false, foreign_key: true |
-| complete | boolean    |                                |
-
-### Association
-
-- belongs_to :user
-- belongs_to :chat

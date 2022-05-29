@@ -10,13 +10,14 @@
   }
 
 .card-wrap {
-  display: flex;
+  display: grid;
+  gap: 26px;
+  grid-template-columns: repeat(3, 1fr);
   flex-wrap: wrap;
-  justify-content: space-between;
   align-items: center;
 }
 
-.card__body{
+.card__body {
   background-color: #fff;
   max-height: 450px;
   width: auto;
@@ -48,36 +49,36 @@
   margin-right: 30px;
 }
 
-.user-image img:hover{
+.user-image img:hover {
   opacity: 0.5;
 }
 
-.user-name{
+.user-name {
   margin-right: 40px;
   color: black;
 }
 
-.user-name:hover{
+.user-name:hover {
   opacity: 0.5;
 }
 
-.user-name a{
+.user-name a {
   color: black;
 }
 
-.user-name a:hover{
+.user-name a:hover {
   opacity: 0.5;
 }
 
-.user-name{
+.user-name {
   margin-right: 40px;
 }
 
-.user-name a{
+.user-name a {
   color: black;
 }
 
-.user-name a:hover{
+.user-name a:hover {
   opacity: 0.5;
 }
 
@@ -89,11 +90,11 @@
   border-bottom: 1px solid #ddd;
 }
 
-.card-img:hover{
+.card-img:hover {
   opacity: 0.5;
 }
 
-.card__name{
+.card__name {
   display: flex;
   align-items: center;
   padding: 0 0 10px 15px;
@@ -105,17 +106,17 @@
   font-weight: bold;
 }
 
-.card__title{
+.card__title {
   color: black;
   margin-right: 16px;
 }
 
-.card__title a:hover{
+.card__title a:hover {
   color: black;
   opacity: 0.5;
 }
 
-.card__title a:hover{
+.card__title a:hover {
   color: black;
   opacity: 0.5;
 }
@@ -126,18 +127,31 @@
   color: black;
 }
 
-.card_sub_title a:hover{
+.card_sub_title a:hover {
   opacity: 0.5;
 }
 
-.card-footer{
+.card-footer {
   display: flex;
+  justify-content: space-around;
   align-items: center;
+  padding: 0 20px;
 }
 
 .card-footer-flex {
-  display: flex;
-  
+  display: flex;  
+  justify-content: space-around;
+  width: 100%;
+  padding-bottom: 10px;
+}
+
+.card-footer-flex a{
+  color: black;
+}
+
+.post_created_at {
+  opacity: 0.5;
+  margin: 20px;
 }
 
 /* アイコン */
@@ -163,13 +177,41 @@
   align-items: center;
 }
 
-.bi-trash {
- margin-left: 15px;
- color: black;
+.chat_btn {
+margin-left: 15px;
+color: #fff;
+}
+
+.chat_btn a {
+color: #fff;
+}
+
+.comment-btn {
+  display: flex;
+}
+
+.comment-icon {
+  margin-right: 20px;
+}
+
+.comment-count {
+  color: #536371;
+}
+
+.bi-chat-dots {
+  color: black;
+}
+
+.bi-chat-dots:hover {
+  opacity: 0.5;
+}
+
+.comment-count:hover {
+  opacity: 0.5;
 }
 
 /* 投稿詳細ページ */
-.post__show__title{
+.post__show__title {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -178,14 +220,14 @@
   margin: 20px 0;
 }
 
-.table__2{
+.table__2 {
   border-collapse: collapse;
   width: 100%;
   height: 200px;
   margin: 0 auto;
 }
 
-.table__col5{
+.table__col5 {
   text-align: left;
   font-weight: bold;
   background: #fafafa;
@@ -196,7 +238,7 @@
   height: 20%;
 }
 
-.table__col6{
+.table__col6 {
   text-align: left;
   border: 1px solid #ddd;
   border-collapse: collapse;
@@ -205,14 +247,14 @@
   padding: 16px 15px;
 }
 
-.table__3{
+.table__3 {
   border-collapse: collapse;
   width: 100%;
   height: 1000px;
   margin: 0 auto;
 }
 
-.table__col7{
+.table__col7 {
   text-align: left;
   font-weight: bold;
   background: #fafafa;
@@ -223,7 +265,7 @@
   height: 20%;
 }
 
-.table__col8{
+.table__col8 {
   text-align: left;
   border: 1px solid #ddd;
   border-collapse: collapse;
@@ -232,7 +274,7 @@
   padding: 16px 15px;
 }
 
-.table__col9{
+.table__col9 {
   text-align: left;
   font-weight: bold;
   background: #fafafa;
@@ -243,7 +285,7 @@
   height: 60%;
 }
 
-.table__col10{
+.table__col10 {
   text-align: left;
   border: 1px solid #ddd;
   border-collapse: collapse;
@@ -253,7 +295,7 @@
   height: 60%
 }
 
-.post__image{
+.post-image {
   width: 100%;
   margin: 0 auto;
   border-top: 1px solid #ddd;
@@ -263,8 +305,20 @@
   justify-content: center;
 }
 
-.post__image img{
+.post-image img {
   height: 400px;
   width: auto;
   margin-bottom: 15px
+}
+
+.post-show-image {
+  max-width: 1029px;
+}
+
+.post-show-image img{
+  width: 100%;
+}
+
+.preview-image {
+  margin-top: 10px;
 }
