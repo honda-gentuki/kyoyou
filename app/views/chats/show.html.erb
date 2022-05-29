@@ -1,4 +1,4 @@
-<% breadcrumb :chat %>
+<% breadcrumb :chat_show, @user %>
 <div class="container">
   <div class="your_container">
     <div class="chat-header">
@@ -37,11 +37,10 @@
       <% end %>
     </div>
 
-
     <div class="bms_messages_container">
       <div class="bms_chat_header">
       </div>
-      <div class="bms_messages">
+      <div class="bms_messages" id="area">
         <div class="message">
           <% @chats.each do |chat| %>
             <% if chat.user_id == current_user.id %>
@@ -79,10 +78,10 @@
       </div>
     </div>
     <%= form_with model: @chat, remote: true, class: :"bms_send" do |f| %>
-    <div class="chat-send">
+    <div class="chat-send" id="send">
       <%= f.text_field :message, class: :"bms_send_message" %>
       <%= f.hidden_field :room_id, class: :"bms_send_btn" %>
-      <%= f.submit "送信", class: :form__btn_send %>
+      <%= f.submit "送信", class: :"form__btn_send" %>
     </div>
     <% end %>
   </div>
