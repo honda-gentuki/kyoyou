@@ -32,33 +32,33 @@ crumb :post_show do |post|
   parent :root
 end
 
-crumb :search do |post|
-  link "検索結果", search_posts_path
-  parent :root
-end
-
 crumb :post_edit do |post|
   link "投稿編集"
   parent :post_show, post
 end
 
+crumb :search do |post|
+  link "検索結果", search_posts_path
+  parent :root
+end
+
 crumb :user_show do |user|
-  link "#{user.nickname}先生のマイページ", user_path(user)
+  link "マイページ", user_path(id: current_user.id)
   parent :root
 end
 
 crumb :user_edit do |user|
-  link "#{user.nickname}先生の編集"
+  link "#編集"
   parent :user_show, user
 end
 
 crumb :follows_user do |user|
-  link "フォロー一覧"
+  link "フォロー"
   parent :user_show, user
 end
 
 crumb :followers_user do |user|
-  link "フォロワー一覧"
+  link "フォロワー"
   parent :user_show, user
 end
 
@@ -67,12 +67,12 @@ crumb :like_index do |user|
   parent :user_show, user
 end
 
-crumb :chat_index do |user|
-  link "チャット一覧"
-  parent :user_show, user
+crumb :chat_index do |chat|
+  link "チャットルーム", chats_path(id: current_user.id)
+  parent :user_show, chat
 end
 
-crumb :chat do |chat|
+crumb :chat_show do |chat|
   link "チャットページ"
   parent :chat_index, chat
 end
