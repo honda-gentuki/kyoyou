@@ -78,11 +78,11 @@
       板書案・スライド・添付資料
     </div>
 
-    <div class="post_show_image">
+    <div class="post-show-image">
       <% if @post.user.image? %>
         <% if @post.images.present? %>
-          <div class="post__image">
-            <div class="previews">
+          <div class="post-image">
+            <div id="previews">
               <% @post.images[0..-1].each do |image| %>
                 <%= image_tag image %>
               <%end%>
@@ -90,6 +90,7 @@
           </div>
         <% end %>
       <% else %>
+      
         <%= image_tag("/images/no-post.png") %>
       <% end %>
     </div>
