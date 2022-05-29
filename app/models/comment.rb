@@ -3,7 +3,5 @@ class Comment < ApplicationRecord
   belongs_to :post
   has_many :notifications, dependent: :destroy
 
-  with_options presence: true do
-    validates :content
-  end
+  validates :content, presence: true
 end
