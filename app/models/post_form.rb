@@ -27,4 +27,8 @@ class PostForm
     post = Post.create(school_list: school_list, course: course, unit: unit, introduction: introduction, introduction_time: introduction_time,
                        development: development, development_time: development_time, summary: summary, summary_time: summary_time, images: images, user_id: user_id)
   end
+
+  def update(params, post)
+    post.update(params)
+  end
 end

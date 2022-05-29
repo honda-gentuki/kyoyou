@@ -2,13 +2,15 @@
 <div class="container">
   <div class="wrap">
     <div class="card__header">
-      <div class="user-image">
-        <% if @post.user.image? %>
-          <%= link_to image_tag @post.user.image.url %>
-        <% else %>
-          <%= image_tag("/images/no-image.png") %>
-        <% end %>
-      </div>
+      <%= link_to user_path(@post.user.id) do %>
+        <div class="user-image">
+          <% if @post.user.image? %>
+            <%= link_to image_tag @post.user.image.url %>
+          <% else %>
+            <%= image_tag("/images/no-image.png") %>
+          <% end %>
+        </div>
+      <% end %>
       <div class="user-name">
         <%= link_to "#{@post.user.nickname}先生", user_path(@post.user.id) %>
       </div>
@@ -85,7 +87,6 @@
           </div>
         <% end %>
       <% else %>
-      
         <%= image_tag("/images/no-post.png") %>
       <% end %>
     </div>
