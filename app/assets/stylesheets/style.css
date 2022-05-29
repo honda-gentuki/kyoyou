@@ -1,3 +1,5 @@
+
+
 /* フラッシュメッセージ・エラーメッセージ*/
 .flash {
   margin-left: 5%;
@@ -77,24 +79,30 @@
   background-color: #f4eade;
   padding: 30px 0 30px 100px;
 }
+
 /* アプリ紹介 */
-.title-contents {
-  width: 100vw;
+.top{
   background-image: url('school.jpg');
+  width: 100vw;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top center;
+  padding: 2vh 10vw;
+}
+
+.title-contents {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  padding: 5vh 15vw;
   color: #fff;
-  text-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
+  text-shadow: 0 0 5px rgba(0, 0, 0, 1);
+
 }
 
 .service-title {
   font-size: 8vh;
+  font-weight: 200;
 }
 
 .service-explain {
@@ -102,43 +110,41 @@
   line-height: 40px;
 }
 
-.list-pict {
-  margin-bottom: 20px;
-  width: 100%;
-}
-
 
 /* 特徴 */
 .feature-contents {
-  padding: 5vh 15vw;
-  background-color: #f2f2f2;
+  width: 100%;
+}
+
+.title {
+  padding: 10px 0;
+  color: #fff;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 1);
 }
 
 .feature-contents>.title {
   text-align: center;
   font-size: 3.5vh;
   font-weight: bold;
-  margin-bottom: 5vh;
   position: relative;
 }
 
 .feature-contents>.title::after {
   content: '';
-  width: 70px;
+  width: 100px;
   height: 4px;
   background-color: #3ccace;
   position: absolute;
-  bottom: -10px;
+  bottom: 5px;
   left: 50%;
   transform: translateX(-50%);
 }
 
 .feature-lists {
-  display: grid;
-  gap: 26px;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: space-around;
 }
 
 .feature-lists img{
@@ -156,11 +162,33 @@
   font-weight: bold;
   font-size: 22px;
   line-height: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .feature-list-description {
   font-size: 18px;
   margin-top: 20px;
+}
+
+.list-pict {
+  margin-bottom: 20px;
+  height: auto;
+  width: 100%;
+}
+
+.list {
+  height: 450px;
+  color: #fff;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 1);
+}
+
+.list img{
+  background-color:rgba(255,255,255,0.9);
+  border-radius: 8px;
+  border: 1px solid #ddd;
 }
 
 /* 投稿メイン */
