@@ -134,9 +134,11 @@
 }
 
 .feature-lists {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  gap: 26px;
+  grid-template-columns: repeat(3, 1fr);
   flex-wrap: wrap;
+  align-items: center;
 }
 
 .feature-lists img{

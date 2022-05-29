@@ -10,9 +10,10 @@
   }
 
 .card-wrap {
-  display: flex;
+  display: grid;
+  gap: 26px;
+  grid-template-columns: repeat(3, 1fr);
   flex-wrap: wrap;
-  justify-content: space-between;
   align-items: center;
 }
 
