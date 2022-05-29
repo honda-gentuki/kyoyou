@@ -90,7 +90,7 @@
     <div class="actions">
       <%= f.submit "更新", class: :form_btn %>
     </div>  
-    <div class="withdrawal-btn">
+    <div class="delete-btn">
       <% if user_signed_in? && current_user.id == @user.id %>
         <%= link_to '退会', user_registration_path, method: :delete, data: { confirm: "アカウントを削除してもよろしいですか？" } %>
         <%= link_to  user_registration_path, method: :delete, data: { confirm: "アカウントを削除してもよろしいですか？" } do %>

@@ -103,5 +103,13 @@
     <div class="actions">
       <%= f.submit "更新する", class: :form_btn %>
     </div>
+    <div class="delete-btn">
+      <% if user_signed_in? && current_user.id == @post.user_id %>
+          <%= link_to '削除',post_path(@post), method: :delete, data: { confirm: "投稿を削除してもよろしいですか？" } %>
+          <%= link_to post_path(@post), method: :delete, data: { confirm: "投稿を削除してもよろしいですか？" } do %>
+            <i class="bi bi-trash"></i>
+          <% end %>
+      <% end %>
+    </div>
   </div>
 <% end %>

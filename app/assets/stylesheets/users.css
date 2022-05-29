@@ -61,34 +61,39 @@
   background-color: #fff;
 }
 
-.card-footer {
+.card_footer {
   border-top: 1px solid #ddd;
   background: #f2f2f2;
   padding: 10px;
   border-radius: 0 0 5px 5px;
   height: 20%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 
-.chat-btn {
-  margin-left: 15px;
-  color: #fff;
-  }
-  
-.chat-btn a {
-  color: #fff;
-  }
-
-.edit-btn {
-  display: block;
-  width: 100%;
-  text-align: center;
-  border-radius: 10px;
-  font-size: 20px;
-  line-height: 50px;
+#user-follows {
+  width: 100vw;
 }
+
+.follow-flex {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 5px 0;
+}
+
+.follow-left {
+  margin-right: 18px;
+}
+
+.card_footer a:hover{
+  opacity: 0.5;
+}
+
 
 /* フォロー */
-.follow-header{
+.follow-header {
   display: flex;
   align-items: center;
   padding: 16px;
@@ -274,13 +279,13 @@
   margin-top: 10px;
 }
 
-.withdrawal-btn {
+.delete-btn {
   display: flex;
   justify-content: flex-end;
   align-items: center;
 
 }
 
-.withdrawal-btn a{
+.delete-btn a{
   color: black;
 }

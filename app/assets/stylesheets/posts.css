@@ -134,11 +134,18 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+  padding: 0 20px;
 }
 
 .card-footer-flex {
   display: flex;  
+  justify-content: space-around;
+  width: 100%;
+  padding-bottom: 10px;
+}
 
+.card-footer-flex a{
+  color: black;
 }
 
 .post_created_at {
@@ -167,11 +174,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.bi-trash {
- margin-left: 15px;
- color: black;
 }
 
 .chat_btn {
