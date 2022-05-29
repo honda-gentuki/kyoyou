@@ -292,7 +292,7 @@ color: #fff;
   height: 60%
 }
 
-.post__image {
+.post-image {
   width: 100%;
   margin: 0 auto;
   border-top: 1px solid #ddd;
@@ -302,8 +302,16 @@ color: #fff;
   justify-content: center;
 }
 
-.post__image img {
+.post-image img {
   height: 400px;
   width: auto;
   margin-bottom: 15px
+}
+
+.post-show-image {
+  max-width: 1029px;
+}
+
+.post-show-image img{
+  width: 100%;
 }
