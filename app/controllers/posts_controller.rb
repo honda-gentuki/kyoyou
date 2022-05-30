@@ -24,6 +24,7 @@ class PostsController < ApplicationController
   end
 
   def show
+    @posts = Post.where(user_id: current_user.id).where.not(image: nil)
     @comments = @post.comments.includes(:user)
     @comment = Comment.new
   end

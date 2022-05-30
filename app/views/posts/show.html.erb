@@ -80,9 +80,13 @@
         <% if @post.images.present? %>
           <div class="post-image">
             <div id="previews">
-              <% @post.images[0..-1].each do |image| %>
-                <%= image_tag image %>
-              <%end%>
+              <div class="slider">
+                <% @post.images[0..-1].each do |image| %>
+                  <div class="slider-image">
+                    <%= image_tag image %>
+                  </div>
+                <%end%>
+              </div>
             </div>
           </div>
         <% end %>
