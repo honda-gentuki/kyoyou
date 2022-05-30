@@ -28,7 +28,6 @@
 }
 
 .card__header {
-  display: block;
   font-size: 16px;
   color: #999;
   text-align: center;
@@ -47,6 +46,7 @@
   border: 1px solid #ddd;
   background-color: #fff;
   margin-right: 30px;
+
 }
 
 .user-image img:hover {
@@ -306,19 +306,22 @@ color: #fff;
 }
 
 .post-image img {
-  height: 400px;
+  height: 500px;
   width: auto;
-  margin-bottom: 15px
+  margin: 0 auto;
 }
 
 .post-show-image {
-  max-width: 1029px;
-}
-
-.post-show-image img{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
 }
 
 .preview-image {
   margin-top: 10px;
+}
+
+#previews {
+  width: 1029px;
 }
