@@ -1,106 +1,108 @@
 <% breadcrumb :user_show, @user %>
-<div class="user-main">
-  <div class="inner">
-    <div class="user-wrapper">
-      <div class="flex-row">
-        <div class="h2">
-          <h2 class="page-heading-show">
-            <%= "#{@user.nickname}先生のプロフィール"%>
-          </h2>
-        </div>
-      </div>
-
-      <div class="user-profile">
-        <div class="profile-left">
-          <div class="profile-card">
-            <div class="card-header">
-              <%= "#{@user.nickname}先生" %>
-              <span><%= "(#{@user.age}代" %> <%= "#{@user.sex})" %></span>
-            </div>
-            <div class="card-image">
-              <% if @user.image? %>
-                <%= image_tag @user.image.url %> 
-              <% else %>
-                <%= image_tag("/images/no-image.png") %>
-              <% end %>
-            </div>
-            <div class="card_footer">
-              <div id="user-follows">
-                <div class="follow-flex">
-                  <div class="follow-left">
-                    <div class="follow">
-                      <%= link_to following_user_path(@user.id) do %>
-                        <div class="follow_count" style="color: black;">フォロー<%= @user.following.count %>人</div>
-                      <% end %>
-                    </div> 
-                    <div class="follower">
-                      <%= link_to followers_user_path(@user.id) do %>
-                      <div class="follower_count" style="color: black;">フォロワー<%= @user.followers.count %>人</div>
-                      <% end %>
-                    </div>
-                  </div>
-                  <% if user_signed_in? && current_user.id != @user.id %>
-                  <div class="follow-right">
-                    <div class="follow-btn">
-                      <%= render "follow_form" %> 
-                    </div> 
-                  </div>
-                  <% end %>
-                </div>
-                <div class="card-footer-flex"> 
-                  <% if user_signed_in? && current_user.id == @user.id %>
-                    <%= link_to edit_user_registration_path(@user) do %>
-                      <i class="bi bi-gear-wide-connected"></i>
-                    <% end %>
-                    <%= link_to "/users/#{@user.id}/likes" do %>
-                      <i class="bi bi-clipboard-heart"></i>
-                    <% end %>
-                    <%= link_to chats_path do %>
-                      <i class="bi bi-envelope"></i>
-                    <% end %>
-                  <% elsif user_signed_in? && current_user.id != @user.id %>
-                    <%= link_to "/users/#{@user.id}/likes" do %>
-                      <i class="bi bi-clipboard-heart"></i>
-                    <% end %>
-                    <%= link_to chat_path(@user.id) do %> 
-                      <i class="bi bi-envelope-plus"></i>
-                    <% end %>
-                  <% end %>
-                </div>
-              </div>
-            </div>  
+<div calass="main">
+  <div class="user-main">
+    <div class="inner">
+      <div class="user-wrapper">
+        <div class="flex-row">
+          <div class="h2">
+            <h2 class="page-heading-show">
+              <%= "#{@user.nickname}先生のプロフィール"%>
+            </h2>
           </div>
-        </div> 
-        <div class="profile-right">
-          <table class="table">
-            <tbody>
-              <tr>
-                <th class="table__col1", style="border-radius: 5px 0 0 0;">学校名</th>
-                <td class="table__col2", style="border-radius: 0 5px 0 0;"><%= @user.school %></td>
-              </tr>
-              <tr>
-                <th class="table__col1">担当教科</th>
-                <td class="table__col2"><%= @user.subject %></td>
-              </tr>
-              <tr>
-                <th class="table__col1">部活動</th>
-                <td class="table__col2"><%= @user.club %></td>
-              </tr>
-              <tr>
-                <th class="table__col3", style="border-radius: 0 0 0 5px;">自己紹介</th>
-                <td class="table__col4", style="border-radius: 0 0 5px 0;"><%= @user.introduce %></td>
-              </tr>
-            </tbody>
-          </table>
         </div>
-      </div>
 
-      <h2 class="page-heading">
-        <%= "#{@user.nickname}先生の投稿"%>
-      </h2>
-      <div class="card-wrap">
-        <%= render partial: 'posts/post', collection: @post %>
-      </div> 
+        <div class="user-profile">
+          <div class="profile-left">
+            <div class="profile-card">
+              <div class="card-header">
+                <%= "#{@user.nickname}先生" %>
+                <span><%= "(#{@user.age}代" %> <%= "#{@user.sex})" %></span>
+              </div>
+              <div class="card-image">
+                <% if @user.image? %>
+                  <%= image_tag @user.image.url %> 
+                <% else %>
+                  <%= image_tag("/images/no-image.png") %>
+                <% end %>
+              </div>
+              <div class="card_footer">
+                <div id="user-follows">
+                  <div class="follow-flex">
+                    <div class="follow-left">
+                      <div class="follow">
+                        <%= link_to following_user_path(@user.id) do %>
+                          <div class="follow_count" style="color: black;">フォロー<%= @user.following.count %>人</div>
+                        <% end %>
+                      </div> 
+                      <div class="follower">
+                        <%= link_to followers_user_path(@user.id) do %>
+                        <div class="follower_count" style="color: black;">フォロワー<%= @user.followers.count %>人</div>
+                        <% end %>
+                      </div>
+                    </div>
+                    <% if user_signed_in? && current_user.id != @user.id %>
+                    <div class="follow-right">
+                      <div class="follow-btn">
+                        <%= render "follow_form" %> 
+                      </div> 
+                    </div>
+                    <% end %>
+                  </div>
+                  <div class="card-footer-flex"> 
+                    <% if user_signed_in? && current_user.id == @user.id %>
+                      <%= link_to edit_user_registration_path(@user) do %>
+                        <i class="bi bi-gear-wide-connected"></i>
+                      <% end %>
+                      <%= link_to "/users/#{@user.id}/likes" do %>
+                        <i class="bi bi-clipboard-heart"></i>
+                      <% end %>
+                      <%= link_to chats_path do %>
+                        <i class="bi bi-envelope"></i>
+                      <% end %>
+                    <% elsif user_signed_in? && current_user.id != @user.id %>
+                      <%= link_to "/users/#{@user.id}/likes" do %>
+                        <i class="bi bi-clipboard-heart"></i>
+                      <% end %>
+                      <%= link_to chat_path(@user.id) do %> 
+                        <i class="bi bi-envelope-plus"></i>
+                      <% end %>
+                    <% end %>
+                  </div>
+                </div>
+              </div>  
+            </div>
+          </div> 
+          <div class="profile-right">
+            <table class="table">
+              <tbody>
+                <tr>
+                  <th class="table__col1", style="border-radius: 5px 0 0 0;">学校名</th>
+                  <td class="table__col2", style="border-radius: 0 5px 0 0;"><%= @user.school %></td>
+                </tr>
+                <tr>
+                  <th class="table__col1">担当教科</th>
+                  <td class="table__col2"><%= @user.subject %></td>
+                </tr>
+                <tr>
+                  <th class="table__col1">部活動</th>
+                  <td class="table__col2"><%= @user.club %></td>
+                </tr>
+                <tr>
+                  <th class="table__col3", style="border-radius: 0 0 0 5px;">自己紹介</th>
+                  <td class="table__col4", style="border-radius: 0 0 5px 0;"><%= @user.introduce %></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <h2 class="page-heading">
+          <%= "#{@user.nickname}先生の投稿"%>
+        </h2>
+        <div class="card-wrap">
+          <%= render partial: 'posts/post', collection: @post %>
+        </div> 
+      </div>
     </div>
   </div>
 </div>

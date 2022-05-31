@@ -212,7 +212,7 @@ opacity: 0.9;
   }
 
   .nav-left {
-    width: 100vw;
+    width: 100%;
   }
 
   .nav-right {
@@ -277,9 +277,5 @@ opacity: 0.9;
   }
   .kyoyu_image{
     width: 100%;
-  }
-  .table{
-    width: 100%;
-  }
-  
+  }  
 }
