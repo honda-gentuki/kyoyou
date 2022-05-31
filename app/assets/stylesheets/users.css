@@ -308,9 +308,9 @@
   }
 
   .page-heading-show {
-    font-size: 15px;
+    font-size: 30px;
   }
-
+  
   .user-profile {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
