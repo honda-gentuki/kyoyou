@@ -236,3 +236,31 @@
   position: relative;
   min-width: 92px;
 }
+
+
+/* タブレット表示 */
+@media (max-width: 1024px) {
+  
+  .inner {
+    width: 90%;
+    margin: 0 auto; 
+  }
+  
+  .page-heading {
+    font-size: 24px;
+  }
+}
+
+ /* スマホ表示 */
+ @media (max-width: 599px) {
+   /* トップページ */
+  .service-title {  
+    font-size: 30px;
+    font-weight: 200;
+  }
+  
+  .service-explain {
+    font-size: 20px;
+    font-weight: 200;
+  }
+}

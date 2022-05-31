@@ -195,7 +195,6 @@ opacity: 0.9;
 
  /* スマホ表示 */
 @media (max-width: 599px) {
-  /* ヘッダー */
   .header {
     width: 100vw;
   }
