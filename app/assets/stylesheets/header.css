@@ -3,6 +3,7 @@
 .header {
   background-color: #2f496e;
   padding: 10px 0;
+  width: 100vw;
 }
 
 .header a:visited {
@@ -10,7 +11,7 @@
 }
 
 .inner {
-  width: 100%;
+  width: 100vw;
   max-width: 1024px;
   margin: 0 auto;
 }
@@ -76,6 +77,8 @@
   transition: 0.4s ease;
   margin-left: 25px;
   text-align: center;
+  min-width: 94px;
+  max-height: 32px;
 }
 
 .nav-btn:hover {
@@ -139,9 +142,145 @@
   margin: 0 25px;
 }
 
+
+.menu1-lists {
+  position: absolute;
+}
+
+.menu1-lists li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 35px;
+  width: 200px;
+  text-align: center;
+  color: black;
+  border: 1px solid #CCCCCC;
+  background-color: #2F496E;
+  padding: 10px 20px;
+}
+
+.menu1-lists li:hover {
+opacity: 0.9;
+}
+
+.menu1-lists a {
+  color: white;
+}
+
+.hidden {
+  display: none;
+}
+
 .bottom-right {
   position: absolute;
   color: #f9ba32;
   top: 15px;
   left: 15px;
+}
+
+
+/* タブレット表示 */
+@media (max-width: 1024px) {
+  
+  .inner {
+    width: 90%;
+    margin: 0 auto; 
+  }
+  
+  .page-heading {
+    font-size: 24px;
+  }
+}
+
+ /* スマホ表示 */
+@media (max-width: 599px) {
+  /* ヘッダー */
+  .header {
+    width: 100vw;
+  }
+
+  .nav {
+    display: grid;
+    gap: 26px;
+    grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .nav-left {
+    width: 100vw;
+  }
+
+  .nav-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    order: 1;
+  }
+
+  .logo {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .search {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    order: 3;
+  }
+
+  .search_form {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 33px;
+  }
+
+  .input-search {
+    height: 33px;
+    margin: 0 5px;
+  }
+
+  .search-btn {
+    height: 33px;
+  }
+
+  .nav-right {
+    width: 100%;
+    order: 2;
+  }
+
+  .page-heading {
+    font-size: 20px;
+  }
+  .card {
+    width: 100%;
+    margin-bottom: 60px;
+  }
+  .card__title {
+    font-size: 18px;
+  }
+  .card__summary {
+    font-size: 14px;
+  }
+  .kyoyu_image{
+    width: 100%;
+  }
+  .table{
+    width: 100%;
+  }
+  
 }

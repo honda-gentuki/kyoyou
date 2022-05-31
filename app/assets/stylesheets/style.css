@@ -108,17 +108,13 @@
 }
 
 /* 特徴 */
-.feature-contents {
-  width: 100%;
-}
-
 .title {
   color: #fff;
   text-shadow: 0 0 5px rgba(0, 0, 0, 1);
   display: flex;
   justify-content: center;
   align-items: center;
-
+  margin-bottom: 15px;
 }
 
 .feature-contents {
@@ -126,6 +122,7 @@
   justify-content: center;
   align-items: center;
   padding: 20px 0;
+  width: 100%;
 }
 
 .title {
@@ -200,9 +197,7 @@
 /* 投稿メイン */
 
 .main {
-  height: 100%;
-  width: 100%;
-  min-width: 800px;
+  width: 100vw;
   min-height: 100vh;
   background-color: #f4eade;
 }
@@ -239,29 +234,5 @@
 
 #menu1 {
   position: relative;
-}
-
-.menu1-lists {
-  position: absolute;
-}
-
-.menu1-lists li {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 35px;
-  width: 200px;
-  text-align: center;
-  color: black;
-  border: 1px solid #CCCCCC;
-  background-color: #2F496E;
-  padding: 10px 20px;
-}
-
-.menu1-lists li:hover {
-opacity: 0.9;
-}
-
-.hidden {
-  display: none;
+  min-width: 92px;
 }
