@@ -238,31 +238,47 @@
 }
 
 
-/* タブレット表示 */
-@media (max-width: 1024px) {
-  
-  .inner {
-    width: 90%;
-    margin: 0 auto; 
-  }
-  
-  .page-heading {
-    font-size: 24px;
-  }
-}
-
  /* スマホ表示 */
  @media (max-width: 599px) {
    /* トップページ */
   .service-title {  
-    font-size: 30px;
+    font-size: 21px;
     font-weight: 200;
   }
   
   .service-explain {
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 200;
   }
 
+  .page-heading {
+    font-size: 18px;
+  }
+
+  .breadcrumbs {
+    background-color: #f4eade;
+    padding: 5px 0 0 5px;
+  }
   
+/* 通知ページ */
+  .notification-main{
+    border-bottom: 1px solid #f2f2f2;
+    padding: 20px 8px;
+    font-size: 15px;
+  }
+  
+  .notification-comment{
+    margin-top: 5px;
+  }
+  
+  .not-notification{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .notification-flex {
+    display: flex;
+    align-items: center;
+  }
 }

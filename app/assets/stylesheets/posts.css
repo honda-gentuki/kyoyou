@@ -329,3 +329,16 @@ color: #fff;
 #previews {
   width: 1029px;
 }
+
+/* タブレット表示 */
+@media (max-width: 1024px) {
+  
+  .inner {
+    width: 90%;
+    margin: 0 auto; 
+  }
+}
+
+ /* スマホ表示 */
+@media (max-width: 599px) {
+}

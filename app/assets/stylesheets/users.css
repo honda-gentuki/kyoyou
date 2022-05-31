@@ -307,6 +307,10 @@
     width: 100vw;
   }
 
+  .page-heading-show {
+    font-size: 15px;
+  }
+
   .user-profile {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
