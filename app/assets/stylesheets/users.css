@@ -203,6 +203,7 @@
 .form-text-wrap {
   width: 100%;
   height: 20%;
+  margin-bottom: 8px;
 }
 
 .form-text {
@@ -255,7 +256,7 @@
 }
 
 .input-name {
-  width: 30%;
+  width: 40%;
   margin: 5px 20px 0 20px;
   height: 48px;
   line-height: 30px;
@@ -301,7 +302,7 @@
 
  /* スマホ表示 */
  @media (max-width: 599px) {
-   /* トップページ */
+   /* ユーザー詳細ページ */
   .main {
     width: 100vw;
   }
@@ -309,7 +310,7 @@
   .user-profile {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
-    justify-content: baseline;
+    justify-content: center;
     align-items: center;
   }
 
@@ -331,7 +332,7 @@
     border-collapse: collapse;
     margin-bottom: 32px;
     width: 100%;
-    height: 410px;
+    height: 400px;
     margin: 0 auto;
   }
   
@@ -376,5 +377,21 @@
     background-color: #f2f2f2;
     width: 80%;
     padding: 16px 15px;
+  }
+
+  /* ログイン */
+  .wrap {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    margin: 20px 0 40px 0;
+  }
+
+  #error_explanation h2{
+    font-size: 15px;
+  }
+
+  #error_explanation  ul{
+    font-size: 12px;
   }
 }
