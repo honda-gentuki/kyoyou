@@ -38,7 +38,7 @@
                 </div>
                 <ul class="menu1-lists hidden" id="menu1-pull-down">
                   <li><%= link_to 'マイページ', user_path(current_user) %></li>
-                  <li><%= link_to 'メッセージ', chats_path %></li>
+                  <li><%= link_to 'チャットルーム', chats_path %></li>
                   <li><%= link_to 'いいね',  "/users/#{current_user.id}/likes" %></li>
                   <li><%= link_to 'フォロー', following_user_path(current_user)  %></li>
                   <li><%= link_to 'フォロワー', followers_user_path(current_user) %></li>
