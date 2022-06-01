@@ -6,18 +6,6 @@
   background-color: #f4eade;
 }
 
-
-.flex-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 40px;
-}
-
-.page-heading-show {
-  font-size: 30px;
-}
-
 /* プロフィール左 */
 .user-profile {
   display: flex;
@@ -157,8 +145,7 @@
 /* 新規登録ページ・ログインページ・ユーザー情報編集*/
 .container {
   height: 100%;
-  width: 100%;
-  min-height: 100vh;
+  width: 100vw;
   background-color: #f4eade;
   display: flex;
   justify-content: center;
@@ -351,8 +338,9 @@
     border-collapse: collapse;
     border: 1px solid #ddd;
     width: 20%;
-    padding: 8px 8px 8px 15px;
+    padding: 8px;
     height: 20%;
+    font-size: 12px;
   }
   
   .table__col2 {
@@ -361,7 +349,8 @@
     border-collapse: collapse;
     background-color: #f2f2f2;
     width: 80%;
-    padding: 16px 15px;
+    padding: 8px;
+    font-size: 12px;
   }
   
   .table__col3{
@@ -371,7 +360,8 @@
     border-collapse: collapse;
     border: 1px solid #ddd;
     width: 20%;
-    padding: 8px 8px 8px 15px;
+    padding: 8px;
+    font-size: 12px;
   }
   
   .table__col4{
@@ -380,7 +370,8 @@
     border-collapse: collapse;
     background-color: #f2f2f2;
     width: 80%;
-    padding: 16px 15px;
+    padding: 8px;
+    font-size: 12px;
   }
 
   /* ログイン */
@@ -397,5 +388,20 @@
 
   #error_explanation  ul{
     font-size: 12px;
+  }
+
+  .chat-header {
+    margin: 20px 0;
+  }
+
+  .your_container {
+    height: 70%;
+    width: 80%;
+  }
+
+  .user-name {
+    font-size: 10px;
+    margin-right: 5px;
+    color: black;
   }
 }
