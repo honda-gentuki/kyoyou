@@ -3,6 +3,7 @@
 .header {
   background-color: #2f496e;
   padding: 10px 0;
+  width: 100vw;
 }
 
 .header a:visited {
@@ -10,7 +11,7 @@
 }
 
 .inner {
-  width: 100%;
+  width: 100vw;
   max-width: 1024px;
   margin: 0 auto;
 }
@@ -74,8 +75,10 @@
   border: 1px #fff solid;
   border-radius: 3px;
   transition: 0.4s ease;
-  margin-left: 25px;
+  margin: 12px;
   text-align: center;
+  min-width: 94px;
+  max-height: 32px;
 }
 
 .nav-btn:hover {
@@ -97,6 +100,8 @@
 
 .nav-right {
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .nav-logout:hover {
@@ -139,9 +144,131 @@
   margin: 0 25px;
 }
 
+.menu1-lists {
+  position: absolute;
+}
+
+.menu1-lists li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 35px;
+  width: 200px;
+  text-align: center;
+  color: black;
+  border: 1px solid #CCCCCC;
+  background-color: #2F496E;
+  padding: 10px 20px;
+}
+
+.menu1-lists li:hover {
+opacity: 0.9;
+}
+
+.menu1-lists a {
+  color: white;
+}
+
+.menu-elements {
+  height: 100%;
+  justify-content: center;
+  margin: auto;
+  display: flex;
+}
+
+#menu1 {
+  position: relative;
+  min-width: 92px;
+}
+
+.hidden {
+  display: none;
+}
+
 .bottom-right {
   position: absolute;
   color: #f9ba32;
   top: 15px;
   left: 15px;
+}
+
+ /* スマホ表示 */
+@media (max-width: 599px) {
+  .header {
+    width: 100vw;
+  }
+
+  .nav {
+    display: grid;
+    gap: 26px;
+    grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .nav-left {
+    width: 100%;
+  }
+
+  .nav-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    order: 1;
+  }
+
+  .logo {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .search {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    order: 3;
+  }
+
+  .search_form {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 33px;
+  }
+
+  .input-search {
+    height: 33px;
+    margin: 0 5px;
+  }
+
+  .search-btn {
+    height: 33px;
+  }
+
+  .nav-right {
+    width: 100%;
+    order: 2;
+  }
+  
+  .card {
+    width: 100%;
+    margin-bottom: 60px;
+  }
+
+  .menu1-lists {
+    position: absolute;
+    top:  40px;
+    left: -60px;
+  }
 }

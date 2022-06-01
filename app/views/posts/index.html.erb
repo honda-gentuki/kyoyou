@@ -22,28 +22,28 @@
       <li class='list'>
         <%= image_tag "idea.png", class:"list-pict" %>
         <h3 class='feature-list-text'>
-          授業を<span class="color">教YOU</span>
+          授業を教YOU
         </h3>
         <p class='feature-list-description'>
-          多くの授業を共有することで日々の授業作成に悩む時間が無くなります！また、フィードバックをもらい授業のアップデートに繋がることも！
+          日々の授業作成に悩む時間が無くなる！また、フィードバックをもらうことで授業のアップデートに繋がることも！
         </p>
       </li>
       <li class='list'>
         <%= image_tag "communication.png", class:"list-pict" %>
         <h3 class='feature-list-text'>
-          教員間の<span class="color">ネットワーク</span>
+          教員のコミュニティ
         </h3>
         <p class='feature-list-description'>
-          繋がりを作り、教員間の何気ない会話も楽しめます！また、授業以外の悩みや不安を共有することで解決に繋がることも！
+          情報交換やアドバイスし合うことで日々の業務に役立つヒントを得よう！
         </p>
       </li>
       <li class='list'>
         <%= image_tag "teacher.png", class:"list-pict" %>
         <h3 class='feature-list-text'>
-          <span class="color">いいね</span>で授業を保存
+          授業をいいねで保存
         </h3>
         <p class='feature-list-description'>
-          お気に入りの授業はいいねで保存できます！
+          参考にしたい授業はいいねで保存！実際の授業でそのまま活用できる！
         </p>
       </li>
     </ul>
@@ -60,12 +60,12 @@
       <% end%> 
     </div>
 
-    <h2 class="page-heading">
+    <div class="page-heading">
       <%= "みんなの投稿"%>
-    </h2>
-    <div class="card-wrap">
-      <%= render partial: "post", collection: @posts %>
     </div>
+    <ul class="card-wrap">
+      <%= render partial: "post", collection: @posts %>
+    </ul>
     <div class="paginate">
       <%= paginate @posts %>
     </div>

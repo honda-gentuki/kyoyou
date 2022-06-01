@@ -1,26 +1,27 @@
-<div class="card">
+<li class="card">
   <div class="card__body">
     <div class="card__header">
+    <div class="user-image">
       <%= link_to user_path(post.user.id) do%>
-        <div class="user-image">
+
           <% if post.user.image? %>
             <%= image_tag post.user.image.url %>
           <% else %>
             <%= image_tag("/images/no-image.png") %>
           <% end %>
-        </div>
       <% end %>
+    </div>
       
       <div class="user-name">
         <%= link_to "#{post.user.nickname}先生", user_path(post.user.id) %>
       </div>
-      <% if user_signed_in? && current_user.id == post.user_id %>
-        <div class="post-edit">
-          <%= link_to edit_post_path(current_user.id) do %>
-            <i class="bi bi-gear"></i>
-          <% end %> 
-        </div>
-      <% end %>
+        <% if user_signed_in? && current_user.id == post.user_id %>
+          <div class="post-edit">
+            <%= link_to edit_post_path(current_user.id) do %>
+              <i class="bi bi-gear"></i>
+            <% end %> 
+          </div>
+        <% end %>
     </div>
 
     <div class="card-img">
@@ -56,8 +57,7 @@
         </div>
       <% end%>
       <div class="post_created_at">
-        <%= " (#{time_ago_in_words(post.created_at)} 前)" %>
+        <%= " (#{time_ago_in_words(post.created_at)}前)" %>
       </div>
     </div> 
-  </div>
-</div>
+</li>

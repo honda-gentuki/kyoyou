@@ -6,7 +6,7 @@
       </div>
 
       <div class="search">
-        <%= form_with url: search_posts_path, method: :get, local: true do |f| %>
+        <%= form_with url: search_posts_path, method: :get, class: :search_form,local: true do |f| %>
           <%= f.text_field :search, placeholder: "投稿検索", class:"input-search", id:"post_form_tag_name", maxlength:"40" %>
           <%= f.button :type => "submit", class:"search-btn" do %>
             <i class="fa-solid fa-magnifying-glass"></i>
@@ -16,7 +16,7 @@
           
       <% if user_signed_in? %>
         <div class="nav-right">
-          <%= link_to "投稿する", new_post_path, class:"nav-btn" %>
+          <%= link_to "投稿", new_post_path, class:"nav-btn" %>
           <div class="nav-icon">
             <div class="btn-default">
               <div class="btn-bell">
@@ -38,10 +38,10 @@
                 </div>
                 <ul class="menu1-lists hidden" id="menu1-pull-down">
                   <li><%= link_to 'マイページ', user_path(current_user) %></li>
-                  <li><%= link_to 'メッセージ', chats_path %></li>
+                  <li><%= link_to 'チャットルーム', chats_path %></li>
                   <li><%= link_to 'いいね',  "/users/#{current_user.id}/likes" %></li>
-                  <li><%= link_to 'フォロー', followers_user_path(current_user) %></li>
-                  <li><%= link_to 'フォロワー',following_user_path(current_user) %></li>
+                  <li><%= link_to 'フォロー', following_user_path(current_user)  %></li>
+                  <li><%= link_to 'フォロワー', followers_user_path(current_user) %></li>
                   <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
                 </ul>
               </li>

@@ -79,9 +79,9 @@
     </div>
     <%= form_with model: @chat, remote: true, class: :"bms_send" do |f| %>
     <div class="chat-send" id="send">
-      <%= f.text_field :message, class: :"bms_send_message" %>
-      <%= f.hidden_field :room_id, class: :"bms_send_btn" %>
-      <%= f.submit "送信", class: :"form__btn_send" %>
+      <%= f.text_field :message, class: :"bms_send_message", id: "form" %>
+      <%= f.hidden_field :room_id, class: :"bms_send_btn", id: "input"%>
+      <%= f.submit "送信", class: :"form__btn_send", id: "submit" %>
     </div>
     <% end %>
   </div>

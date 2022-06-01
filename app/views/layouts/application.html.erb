@@ -24,7 +24,9 @@
   <body>
     <%= render "shared/header"%>
     <%= breadcrumbs separator: " &rsaquo; " %> 
+    <div class="main">
     <%= yield %>
+    </div>
     <%= render "shared/footer"%>
   </body>
 </html>
