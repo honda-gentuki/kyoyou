@@ -1,6 +1,10 @@
 ja:
   activerecord:
+    models:
+      user: ユーザー
+      post_form: ポストフォーム
     attributes:
+    models:
       user:
         nickname: ニックネーム
         email: メールアドレス
@@ -10,8 +14,10 @@ ja:
         last_name: 姓
         first_name_kana: メイ
         last_name_kana: セイ
-      post:
-        school_list: 学校項目
+  activemodel:
+    attributes:
+      post_form:
+        school_list: 学校欄
         course: 科目名
         unit: 単元名
         introduction: 導入
