@@ -26,6 +26,7 @@ ja:
         development_time: 展開の時間
         summary: まとめ
         summary_time: まとめの時間
+        user_id: ユーザー
     errors:
       messages:
         record_invalid: 'バリデーションに失敗しました: %{errors}'
