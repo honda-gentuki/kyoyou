@@ -30,7 +30,7 @@ Basic認証PASS：2525
 1, 投稿カードのいいねアイコンをクリックし、いいね一覧ページに投稿を保存。
 2, いいね一覧ページからいつでも投稿が観覧可能。
 
-# アプリケーションを作成した背景・実装した機能についての画像やGIFおよびその説明
+# アプリケーションを作成した背景・実装した機能についての画像やGIFおよびその説明・工夫ポイントしたポイントなど。
 以下スライドショーをご覧ください。
 https://docs.google.com/presentation/d/1NN15b5MgdzpBu8yI-Vpg1nz42N5hI_q8SQtmP-DCMyU/edit#slide=id.gefadc01042_0_5
 
@@ -54,8 +54,30 @@ https://docs.google.com/spreadsheets/d/11dfzMkYT1b7q02jN6W7dYq7yp11eQOAG65TMmG8V
 ![教YOU＿画面遷移図](https://user-images.githubusercontent.com/100074969/171888907-9d82ad4b-5880-4f96-80d9-84e374e765ac.png)
 
 # 開発環境
+- フロントエンド
+- バックエンド
+- インフラ
+- テスト
+- テキストエディタ
+- タスク管理
+
+# 使用技術
+- Ruby 2.6.5
+- Ruby on Rails 6.0.0
+- MySQL 5.6
+- Nginx
+- AWS
+- VPC
+- EC2
+- RDS
+- Route53
+- ALB
+- ACM
+- RSpec
+- Docker/Docker-compose
+- CircleCi 自動テスト
+
 # ローカルでの動作方法※
-# 工夫したポイント※
 
 # テーブル設計
 
