@@ -2,7 +2,7 @@
 教YOU
 
 # アプリケーション概要
-教員の業務時間削減を目的とした業務教YOU(共有)アプリです。
+教員の業務時間削減を目的とした業務教YOU(共有)アプリ。
 
 # URL
 https://kyoyou.herokuapp.com/
@@ -16,9 +16,9 @@ Basic認証PASS：2525
 # 利用方法
 ## 授業投稿
 1, トップページのヘッダーから新規登録。
-2, 要約した授業内容をフォームに入力し、投稿するボタンから授業の内容を入力し投稿。（画像部分は板書案・スライド・授業の添付資料・指導案を添付）
-3, 投稿内容を自身で確認。(自身の授業をいつでも振り返る事ができる。)
-4, コメント部分でフィードバックをもらう。
+2, 要約した授業内容をフォームに入力し、投稿するボタンから授業の内容を入力し投稿（画像部分は板書案・スライド・授業の添付資料・指導案を添付）。
+3, 投稿内容を自身で確認(自身の授業をいつでも振り返る事ができる)。
+4, コメントを送信し、投稿に対してフィードバックを行う。
 
 ## 教員同士のコミュニケーション
 1, 投稿カードからユーザーのアイコン画像、又はユーザーのニックネームをクリックしユーザー詳細ページに遷移。
@@ -31,9 +31,8 @@ Basic認証PASS：2525
 2, いいね一覧ページからいつでも投稿が観覧可能。
 
 # アプリケーションを作成した背景・実装した機能についての画像やGIFおよびその説明・工夫ポイントしたポイントなど。
-以下スライドショーをご覧ください。
+以下のスライドショーをご覧ください。
 https://docs.google.com/presentation/d/1Xxg3dc_g6JIvqaO8KLFfZAp5s4GVsZUx8Fe3cOvitcQ/edit?usp=sharing
-
 
 # 洗い出した要件
 https://docs.google.com/spreadsheets/d/11dfzMkYT1b7q02jN6W7dYq7yp11eQOAG65TMmG8V9LQ/edit#gid=982722306
@@ -78,6 +77,10 @@ https://docs.google.com/spreadsheets/d/11dfzMkYT1b7q02jN6W7dYq7yp11eQOAG65TMmG8V
 - CircleCi 自動テスト
 
 # ローカルでの動作方法※
+% git clone https://github.com/honda-gentuki/kyoyou.git
+% cd kyoyou
+% bundle install
+% yarn install
 
 # テーブル設計
 
