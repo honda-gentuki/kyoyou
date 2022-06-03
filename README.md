@@ -8,9 +8,9 @@
 https://kyoyou.herokuapp.com/
 
 # テスト用アカウント
-Basic認証ID：takutoo
-Basic認証PASS：2525
-メールアアドレス：test@com
+Basic認証ID：takutoo<br>
+Basic認証PASS：2525<br>
+メールアアドレス：test@com<br>
 パスワード：tesuto1
 
 # 利用方法
