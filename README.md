@@ -36,6 +36,8 @@ https://docs.google.com/presentation/d/1NN15b5MgdzpBu8yI-Vpg1nz42N5hI_q8SQtmP-DC
 
 
 # 洗い出した要件
+https://docs.google.com/spreadsheets/d/11dfzMkYT1b7q02jN6W7dYq7yp11eQOAG65TMmG8V9LQ/edit#gid=982722306
+
 # 実装した機能についての画像やGIFおよびその説明
 # 実装予定の機能
 # データベース設計
