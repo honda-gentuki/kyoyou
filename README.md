@@ -47,8 +47,12 @@ https://docs.google.com/spreadsheets/d/11dfzMkYT1b7q02jN6W7dYq7yp11eQOAG65TMmG8V
 - CircleCI
 
 # データベース設計
-![Uploading KYOYOU_ER図.png…]()
+![KYOYOU_ER図](https://user-images.githubusercontent.com/100074969/171890006-c446dedd-72b2-44c8-a3b6-0fced81bdd82.png)
+
+
 # 画面遷移図
+![教YOU＿画面遷移図](https://user-images.githubusercontent.com/100074969/171888907-9d82ad4b-5880-4f96-80d9-84e374e765ac.png)
+
 # 開発環境
 # ローカルでの動作方法※
 # 工夫したポイント※
