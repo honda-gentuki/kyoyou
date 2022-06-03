@@ -32,7 +32,7 @@ Basic認証PASS：2525
 
 # アプリケーションを作成した背景・実装した機能についての画像やGIFおよびその説明・工夫ポイントしたポイントなど。
 以下スライドショーをご覧ください。
-https://docs.google.com/presentation/d/1NN15b5MgdzpBu8yI-Vpg1nz42N5hI_q8SQtmP-DCMyU/edit#slide=id.gefadc01042_0_5
+https://docs.google.com/presentation/d/1Xxg3dc_g6JIvqaO8KLFfZAp5s4GVsZUx8Fe3cOvitcQ/edit?usp=sharing
 
 
 # 洗い出した要件
