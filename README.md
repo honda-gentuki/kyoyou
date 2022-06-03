@@ -31,6 +31,10 @@ Basic認証PASS：2525
 2, いいね一覧ページからいつでも投稿が観覧可能。
 
 # アプリケーションを作成した背景
+以下スライドショーをご覧ください。
+https://docs.google.com/presentation/d/1NN15b5MgdzpBu8yI-Vpg1nz42N5hI_q8SQtmP-DCMyU/edit#slide=id.gefadc01042_0_5
+
+
 # 洗い出した要件
 # 実装した機能についての画像やGIFおよびその説明
 # 実装予定の機能
