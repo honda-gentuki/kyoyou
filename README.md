@@ -30,7 +30,7 @@ Basic認証PASS：2525
 1, 投稿カードのいいねアイコンをクリックし、いいね一覧ページに投稿を保存。
 2, いいね一覧ページからいつでも投稿が観覧可能。
 
-# アプリケーションを作成した背景
+# アプリケーションを作成した背景・実装した機能についての画像やGIFおよびその説明
 以下スライドショーをご覧ください。
 https://docs.google.com/presentation/d/1NN15b5MgdzpBu8yI-Vpg1nz42N5hI_q8SQtmP-DCMyU/edit#slide=id.gefadc01042_0_5
 
@@ -38,9 +38,16 @@ https://docs.google.com/presentation/d/1NN15b5MgdzpBu8yI-Vpg1nz42N5hI_q8SQtmP-DC
 # 洗い出した要件
 https://docs.google.com/spreadsheets/d/11dfzMkYT1b7q02jN6W7dYq7yp11eQOAG65TMmG8V9LQ/edit#gid=982722306
 
-# 実装した機能についての画像やGIFおよびその説明
 # 実装予定の機能
+- 部活指導動投稿機能
+- pdf投稿機能
+- チャット画像投稿機能
+- AWS
+- Docker
+- CircleCI
+
 # データベース設計
+
 # 画面遷移図
 # 開発環境
 # ローカルでの動作方法※
