@@ -57,6 +57,7 @@
 }
 
 .input-class {
+  white-space: pre-wrap;
   width: 100%;
   margin-top: 5px;
   height: 120px;

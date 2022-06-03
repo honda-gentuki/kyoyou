@@ -103,6 +103,7 @@
 }
 
 .table__col1 {
+  white-space: pre-wrap;
   text-align: left;
   font-weight: bold;
   background: #fafafa;
@@ -114,6 +115,7 @@
 }
 
 .table__col2 {
+  white-space: pre-wrap;
   text-align: left;
   border: 1px solid #ddd;
   border-collapse: collapse;
@@ -123,6 +125,7 @@
 }
 
 .table__col3{
+  white-space: pre-wrap;
   text-align: left;
   font-weight: bold;
   background: #fafafa;
@@ -133,6 +136,7 @@
 }
 
 .table__col4{
+  white-space: pre-wrap;
   text-align: left;
   border: 1px solid #ddd;
   border-collapse: collapse;
@@ -243,6 +247,7 @@
 }
 
 .input-name {
+  white-space: pre-wrap;
   width: 40%;
   margin: 5px 20px 0 20px;
   height: 48px;
