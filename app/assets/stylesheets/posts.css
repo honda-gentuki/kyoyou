@@ -312,7 +312,9 @@ color: #fff;
 }
 
 .preview-image {
-  margin: 20px;
+  height: 500px;
+  width: auto;
+  margin: 0 auto;
 }
 
 .previews {

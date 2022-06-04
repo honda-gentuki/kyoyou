@@ -1,12 +1,12 @@
 require 'rails_helper'
 
 RSpec.describe PostForm, type: :model do
-  describe '新規投稿' do
-    before do
-      user = FactoryBot.create(:user)
-      @post_form = FactoryBot.build(:post_form, user_id: user.id)
-    end
+  before do
+    user = FactoryBot.create(:user)
+    @post_form = FactoryBot.build(:post_form, user_id: user.id)
+  end
 
+  describe '新規投稿' do
     context 'ユーザーが新規投稿できるとき' do
       it '必須項目が正しく入力されていれば投稿できる' do
         expect(@post_form).to be_valid
