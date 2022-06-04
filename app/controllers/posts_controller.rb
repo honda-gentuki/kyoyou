@@ -52,7 +52,7 @@ class PostsController < ApplicationController
   end
 
   def search
-    redirect_to root_path if params[:search] == ""
+    redirect_to root_path if params[:search] == ''
     @users = User.all
     @posts = Post.all.order('created_at DESC').page(params[:page])
     if params[:search].present?

@@ -5,7 +5,7 @@ class Post < ApplicationRecord
   has_many :users, through: :likes
   has_many_attached :images
   has_many :notifications, dependent: :destroy
-  
+
   def create_notification_like!(current_user)
     temp = Notification.where(['visiter_id = ? and visited_id = ? and post_id = ? and action = ? ', current_user.id, user_id, id,
                                'like'])
