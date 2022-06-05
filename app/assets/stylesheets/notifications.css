@@ -1,14 +1,14 @@
-.notification-main{
+.notification-main {
   border-bottom: 1px solid #f2f2f2;
   padding: 40px 50px;
   font-size: 20px;
 }
 
-.notification-comment{
+.notification-comment {
   margin-top: 5px;
 }
 
-.not-notification{
+.not-notification {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -17,4 +17,8 @@
 .notification-flex {
   display: flex;
   align-items: center;
+}
+
+.notification-main a {
+  color: #260BED;
 }

@@ -22,6 +22,11 @@ ja:
         user_id: ユーザー
         post: 投稿
         post_id: 投稿
+      like:
+        user: ユーザー
+        post: 投稿
+        user_id: ユーザー
+        post_id: ポスト
 
 
 

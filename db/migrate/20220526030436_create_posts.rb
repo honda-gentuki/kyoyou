@@ -11,7 +11,6 @@ class CreatePosts < ActiveRecord::Migration[6.0]
       t.string     :summary,            null: false
       t.integer    :summary_time,       null: false
       t.references :user,               null: false, foreign_key: true
-
       t.timestamps
     end
   end 
