@@ -11,11 +11,21 @@ RSpec.describe Like, type: :model do
       it "ユーザーと投稿があれば保存できる" do
         expect(@like).to be_valid
       end
+
+      it "投稿が同じでもユーザーが違えばいいねできる" do
+        another_like = FactoryBot.create(:like)
+        expect(FactoryBot.create(:like, user_id: another_like.user_id)).to be_valid
+      end
+
+      it "ユーザーが同じでも投稿が違えばいいねできる" do
+        another_like = FactoryBot.create(:like)
+        expect(FactoryBot.create(:like, post: another_like.post)).to be_valid
+      end
     end
 
     context 'いいねできない場合' do
       it "ユーザーが空ではいいねできない" do
-        @like.user = nil
+        @like.user_id = nil
         @like.valid?
         expect(@like.errors.full_messages).to include("ユーザーを入力してください")
       end
