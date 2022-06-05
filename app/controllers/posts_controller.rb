@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :authenticate_user!, only: [:new, :edit]
+  before_action :authenticate_user!, only: [:new, :edit, :show]
   before_action :move_to_index, except: [:index, :show, :search]
   before_action :set_post, only: [:show, :edit, :update]
   before_action :set_post_form, only: [:create, :update]
@@ -52,7 +52,7 @@ class PostsController < ApplicationController
   end
 
   def search
-    redirect_to root_path if params[:search] == ""
+    redirect_to root_path if params[:search] == ''
     @users = User.all
     @posts = Post.all.order('created_at DESC').page(params[:page])
     if params[:search].present?

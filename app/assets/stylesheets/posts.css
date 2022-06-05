@@ -306,7 +306,7 @@ color: #fff;
 
 .post-image img {
   height: 500px;
-  width: auto;
+  max-width: 100%;
   margin: 0 auto;
 }
 
@@ -317,12 +317,8 @@ color: #fff;
   width: 100%;
 }
 
-.preview-image {
-  margin: 20px;
-}
-
 .previews {
-  width: vw;
+  width: 100%;
   display: grid;
   gap: 26px;
   grid-template-columns: repeat(3, 1fr);

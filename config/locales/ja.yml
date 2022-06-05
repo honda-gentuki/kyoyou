@@ -1,5 +1,11 @@
 ja:
   activerecord:
+    models:
+      user: ユーザー
+      comment: コメント
+      post: 投稿
+      chat: チャット
+      room: チャットルーム
     attributes:
       user:
         nickname: ニックネーム
@@ -10,8 +16,30 @@ ja:
         last_name: 姓
         first_name_kana: メイ
         last_name_kana: セイ
-      post:
-        school_list: 学校項目
+        user: ユーザー
+        post: 投稿
+      comment:
+        content: コメント
+        user: ユーザー
+        user_id: ユーザー
+        post: 投稿
+        post_id: 投稿
+      like:
+        user: ユーザー
+        post: 投稿
+        user_id: ユーザー
+        post_id: ポスト
+      chat:
+        message: メッセージ
+        user: ユーザー
+        room: チャットルーム
+
+
+
+  activemodel:
+    attributes:
+      post_form:
+        school_list: 学校欄
         course: 科目名
         unit: 単元名
         introduction: 導入
@@ -20,6 +48,7 @@ ja:
         development_time: 展開の時間
         summary: まとめ
         summary_time: まとめの時間
+        user_id: ユーザー
     errors:
       messages:
         record_invalid: 'バリデーションに失敗しました: %{errors}'

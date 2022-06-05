@@ -13,6 +13,7 @@ class PostForm
     validates :introduction, length: { maximum: 300 }
     validates :development,  length: { maximum: 1000 }
     validates :summary,      length: { maximum: 300 }
+    validates :user_id
   end
 
   validates :images, length: { maximum: 6, message: 'は6枚以下にしてください' }
