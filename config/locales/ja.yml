@@ -4,6 +4,8 @@ ja:
       user: ユーザー
       comment: コメント
       post: 投稿
+      chat: チャット
+      room: チャットルーム
     attributes:
       user:
         nickname: ニックネーム
@@ -27,6 +29,10 @@ ja:
         post: 投稿
         user_id: ユーザー
         post_id: ポスト
+      chat:
+        message: メッセージ
+        user: ユーザー
+        room: チャットルーム
 
 
 
