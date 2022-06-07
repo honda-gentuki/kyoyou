@@ -100,5 +100,27 @@ describe UsersController, type: :request do
         end
       end
     end
+
+    describe 'GET #followers' do
+      context "ログインしている場合" do
+        before do
+          sign_in @user
+        end
+        it 'followersアクションにリクエストすると正常にレスポンスが返ってくる' do 
+          get following_user_path(@user)
+          expect(response.status).to eq 200
+        end
+        it 'followersアクションにリクエストすると正常にレスポンスに見出しのフォロワーが存在する' do 
+          get followers_user_path(@user)
+          expect(response.body).to include('フォロー')
+        end
+      end
+      context "ログインしていない場合" do
+        it 'ログインページにリダイレクトされる' do
+          get followers_user_path(@user)
+          expect(response.status).to eq 302
+        end
+      end
+    end
   end
 end
