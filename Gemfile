@@ -66,3 +66,4 @@ gem 'rmagick'
 gem 'jquery-rails'
 gem 'kaminari'
 gem 'gretel'
+gem "aws-sdk-s3", require: false
