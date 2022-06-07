@@ -1,3 +1,7 @@
+### 現状
+現在開発途中です。今後付け加えていく機能やインフラ構築などは下記「実装予定の機能・インフラ構築」を御覧ください。
+また、使用技術に関しても今後実装予定の技術を記述しております。
+
 # アプリケーション名
 ### 教YOU
 
@@ -37,7 +41,7 @@ https://docs.google.com/presentation/d/1Xxg3dc_g6JIvqaO8KLFfZAp5s4GVsZUx8Fe3cOvi
 # 洗い出した要件
 https://docs.google.com/spreadsheets/d/11dfzMkYT1b7q02jN6W7dYq7yp11eQOAG65TMmG8V9LQ/edit#gid=982722306
 
-# 実装予定の機能
+# 実装予定の機能・インフラ構築
 - 部活指導動投稿機能
 - pdf投稿機能
 - チャット画像投稿機能
