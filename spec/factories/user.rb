@@ -14,6 +14,6 @@ FactoryBot.define do
     subject                 { '体育' }
     club                    { '野球' }
     introduce               { 'よろしくお願いします。' }
-    image                   { 'app/assets/images/test.png' }
+    image                   { 'public/images/test.png' }
   end
 end
