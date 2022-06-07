@@ -78,5 +78,27 @@ describe UsersController, type: :request do
         expect(response.status).to eq 302
       end
     end
+
+    describe 'GET #following' do
+      context "ログインしている場合" do
+        before do
+          sign_in @user
+        end
+        it 'followingアクションにリクエストすると正常にレスポンスが返ってくる' do 
+          get following_user_path(@user)
+          expect(response.status).to eq 200
+        end
+        it 'followingアクションにリクエストすると正常にレスポンスに見出しのフォローが存在する' do 
+          get following_user_path(@user)
+          expect(response.body).to include('フォロー')
+        end
+      end
+      context "ログインしていない場合" do
+        it 'ログインページにリダイレクトされる' do
+          get following_user_path(@user)
+          expect(response.status).to eq 302
+        end
+      end
+    end
   end
 end
