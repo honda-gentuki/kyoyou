@@ -53,6 +53,11 @@ group :test do
   gem 'factory_bot_rails'
   gem 'faker'
   gem 'pry-rails'
+  gem 'capistrano'
+  gem 'capistrano-rbenv'
+  gem 'capistrano-bundler'
+  gem 'capistrano-rails'
+  gem 'capistrano3-unicorn'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
