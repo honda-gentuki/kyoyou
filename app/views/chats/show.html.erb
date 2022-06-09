@@ -4,14 +4,14 @@
     <div class="chat-header">
       <%= link_to user_path(@user.id) do%>
         <div class="chat-user">
-          <div class="user-image">
+          <div class="chat-user-image">
             <% if  @user.image? %>
               <%= image_tag  @user.image.url %>
             <% else %>
               <%= image_tag("/images/no-image.png") %>
             <% end %>
           </div>
-          <div class="user-name">
+          <div class="chat-user-name">
             <%= @user.nickname %>先生
           </div>
         </div>
@@ -23,14 +23,14 @@
       </div>
       <%= link_to user_path(current_user) do%>
         <div class ="chat-user">
-          <div class="user-image">
+          <div class="chat-user-image">
             <% if current_user.image? %>
               <%= image_tag current_user.image.url %>
             <% else %>
               <%= image_tag("/images/no-image.png") %>
             <% end %>
           </div>
-          <div class="user-name">
+          <div class="chat-user-name">
           <%= current_user.nickname %>先生
           </div>
         </div>
@@ -48,7 +48,7 @@
                   <div class="bms_message_box">
                       <div class="bms_message_content">
                           <div class="bms_message_text">
-                            <div style="text-align: left"><%= chat.message %></div>
+                            <div style="text-align: left" id='message'><%= chat.message %></div>
                           </div>
                       </div>
                   </div>

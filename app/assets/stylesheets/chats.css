@@ -2,12 +2,40 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+  width: 100%;
 }
 
 .chat-user {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.chat-user-image img{ 
+  height: 57px;
+  width: 57px;
+  object-fit: cover;
+  border-radius: 150px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  margin-right: 30px;
+}
+
+.chat-user-name {
+  color: black;
+  width: 100%;
+}
+
+.chat-user-name:hover {
+  opacity: 0.5;
+}
+
+.chat-user-name a {
+  color: black;
+}
+
+.chat-user-image img:hover {
+  opacity: 0.5;
 }
 
 .your_container {
@@ -51,6 +79,7 @@
   font-size: 16px;
   word-wrap: break-word;
   white-space: normal;
+  overflow: scroll;
 }
 
 .bms_message_box {
@@ -154,4 +183,42 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+/* タブレット表示 */
+@media (max-width: 1024px) {
+  
+  .inner {
+    width: 90%;
+    margin: 0 auto; 
+  }
+}
+
+ /* スマホ表示 */
+@media (max-width: 599px) {
+  .chat-user-image img{
+    height: 35px;
+    width: 35px;
+    margin: 0 auto;
+    margin-right: 5px;
+  }
+  
+  .chat-user-name{
+    font-size: 8px;
+  }
+
+  .chat-user-name {
+    width: 100%;
+  }
+
+  .myself-user {
+    font-size: 8px;
+  }
+  .bms_message {
+    font-size: 8px;
+  }
+  
+  .bms_message_box {
+    font-size: 8px;
+  }
 }
