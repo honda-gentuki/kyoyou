@@ -146,6 +146,7 @@
 
 .menu1-lists {
   position: absolute;
+  z-index: 10;
 }
 
 .menu1-lists li {
