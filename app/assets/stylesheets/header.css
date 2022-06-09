@@ -77,7 +77,7 @@
   transition: 0.4s ease;
   margin: 12px;
   text-align: center;
-  min-width: 94px;
+  min-width: 95px;
   max-height: 32px;
 }
 
@@ -200,7 +200,6 @@ opacity: 0.9;
 
   .nav {
     display: grid;
-    gap: 26px;
     grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
     flex-wrap: wrap;
     align-items: center;
@@ -221,8 +220,14 @@ opacity: 0.9;
     order: 1;
   }
 
+  .nav-left a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   .logo {
-    width: 100%;
+    width: 50%;
     height: auto;
     display: flex;
     justify-content: center;
