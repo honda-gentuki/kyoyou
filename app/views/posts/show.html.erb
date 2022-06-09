@@ -76,20 +76,18 @@
     </div>
 
     <div class="post-show-image">
-      <% if @post.user.image? %>
-        <% if @post.images.present? %>
-          <div class="post-image">
-            <div id="previews">
-              <div class="slider">
-                <% @post.images[0..-1].each do |image| %>
-                  <div class="slider-image">
-                    <%= image_tag image %>
-                  </div>
-                <%end%>
-              </div>
+      <% if @post.images.present? %>
+        <div class="post-image">
+          <div id="previews">
+            <div class="slider">
+              <% @post.images[0..-1].each do |image| %>
+                <div class="slider-image">
+                  <%= image_tag image %>
+                </div>
+              <%end%>
             </div>
           </div>
-        <% end %>
+        </div>
       <% else %>
         <%= image_tag("/images/no-post.png") %>
       <% end %>
