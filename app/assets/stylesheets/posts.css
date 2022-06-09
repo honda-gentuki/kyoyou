@@ -32,8 +32,7 @@
 }
 
 .card__header {
-  grid-template-columns: repeat(3, 1fr);
-  display: grid;
+  display: flex;
   font-size: 16px;
   color: #999;
   text-align: center;
@@ -53,14 +52,25 @@
   margin-right: 30px;
 }
 
+.user-image { 
+  width: 15%;
+}
+
+.post-icon {
+  width: 15%;
+}
+
 .user-image img:hover {
   opacity: 0.5;
 }
 
 .user-name {
-  margin-right: 40px;
   color: black;
-  width: 100%;
+  width: 70%;
+}
+
+.post-edit {
+  width: 15%;
 }
 
 .user-name:hover {
@@ -314,6 +324,10 @@ color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
+}
+
+.post-show-image img{
   width: 100%;
 }
 
