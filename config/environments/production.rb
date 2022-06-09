@@ -5,7 +5,7 @@ Rails.application.configure do
   config.action_cable.allowed_request_origins = ['https://【Herokukyoyou】.herokuapp.com', 'http://【Herokukyoyou】.herokuapp.com']
 
     ActionCable.server.config.disable_request_forgery_protection = true
-  config.action_cable.url = "ws://35.76.211.21/cable" 
+  config.action_cable.url = "ws:///13.113.200.90/cable" 
   config.action_cable.allowed_request_origins = ['http://13.113.200.90']
   
   # Settings specified here will take precedence over those in config/application.rb.
