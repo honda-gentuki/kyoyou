@@ -42,6 +42,10 @@ https://docs.google.com/spreadsheets/d/11dfzMkYT1b7q02jN6W7dYq7yp11eQOAG65TMmG8V
 - pdf投稿機能
 - チャット画像投稿機能
 - AWS
+- VPC
+- EC2
+- RDS
+_ Route53
 - Docker
 - CircleCI
 
@@ -60,7 +64,7 @@ https://docs.google.com/spreadsheets/d/11dfzMkYT1b7q02jN6W7dYq7yp11eQOAG65TMmG8V
 - テキストエディタ
 - タスク管理
 
-# 使用技術
+# 使用技術(これから実装予定のものを含む)
 - Ruby 2.6.5
 - Ruby on Rails 6.0.0
 - MySQL 5.6
@@ -70,8 +74,6 @@ https://docs.google.com/spreadsheets/d/11dfzMkYT1b7q02jN6W7dYq7yp11eQOAG65TMmG8V
 - EC2
 - RDS
 - Route53
-- ALB
-- ACM
 - RSpec
 - Docker/Docker-compose
 - CircleCi 自動テスト
@@ -211,6 +213,7 @@ https://docs.google.com/spreadsheets/d/11dfzMkYT1b7q02jN6W7dYq7yp11eQOAG65TMmG8V
 | ------- | ---------- | ------------------------------ |
 | user    | references | null: false, foreign_key: true |
 | room    | references | null: false, foreign_key: true |
+| partner | references | null: false, foreign_key: true |
 | message | text       | null: false                    |
 
 ### Association
