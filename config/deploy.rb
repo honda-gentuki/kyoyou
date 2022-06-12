@@ -4,6 +4,8 @@ lock '3.17.0'
 # Capistranoのログの表示に利用する
 set :application, 'kyoyou'
 
+set :deploy_to, '/var/portfolio/kyoyou'
+
 # どのリポジトリからアプリをpullするかを指定する
 set :repo_url,  'git@github.com:honda-gentuki/kyoyou.git'
 
