@@ -213,7 +213,7 @@ _ Route53
 | ------- | ---------- | ------------------------------ |
 | user    | references | null: false, foreign_key: true |
 | room    | references | null: false, foreign_key: true |
-| partner | references | null: false, foreign_key: true |
+| partner | integer    | null: false, foreign_key: true |
 | message | text       | null: false                    |
 
 ### Association
