@@ -10,8 +10,8 @@ https://kyoyou.herokuapp.com/
 # テスト用アカウント
 Basic認証ID：takutoo<br>
 Basic認証PASS：2525<br>
-メールアアドレス：test@com<br>
-パスワード：tesuto1
+メールアアドレス：syakaitaro@kyoyou.com<br>
+パスワード：syakai1
 
 # 利用方法
 ## 授業投稿
