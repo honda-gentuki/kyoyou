@@ -157,6 +157,65 @@
   margin: 20px;
 }
 
+/* プレビュー */
+#previews {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.preview {
+  margin-right: 15px;
+}
+
+.image-delete-button {
+  text-align: center;
+  border: solid 1px;
+  cursor: pointer;
+  margin-bottom: 5px;
+  width: 100%;
+}
+
+.preview-image {
+  height: 150px;
+  width: 180px;
+  object-fit: cover;
+}
+
+.image-delete-button {
+  text-align: center;
+  border: solid 1px;
+  cursor: pointer;
+  width: 180px;
+}
+
+.main-image {
+  height: 200px;
+  width: 200px;
+}
+
+/* いいね周り */
+.flex-likes{
+  display: flex;
+}
+
+.likes-icon{
+  margin-right: 20px;
+}
+
+.likes-count{
+  color: #536371;
+  margin-right: 30px;
+}
+
+.bi-suit-heart-fill{
+  color: red;
+}
+
+.bi-suit-heart{
+  color: red;
+}
+
 /* アイコン */
 .bi-gear {
   color: black;
@@ -346,94 +405,68 @@ color: #fff;
   color: #2F496E;
 }
 
-/* タブレット表示 */
-@media (max-width: 1024px) {
-  
-  .inner {
-    width: 90%;
-    margin: 0 auto; 
-  }
+/* コメント */
+.post-comments {
+  background-color: #f6f6f6;
+  padding: 30px;
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  border: 1px solid #ddd;
+  padding: 20px 0 40px 0;
 }
 
- /* スマホ表示 */
-@media (max-width: 599px) {
-  #previews {
-    width: 100%;
-    display: grid;
-    gap: 26px;
-    grid-template-columns: repeat(1, 1fr);
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-  }
+.h4 {
+  margin-left: 50px
+}
 
-  .slick-slide img{
-    width: 100%;
-  }
+.comments-lists {
+  padding-left: 20px;
+  background-color: #fff;
+}
 
-  .slider button{
-    display: none;
-  }
+.comment-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+}
 
-  .slick-arrow {
-    display: none;
-  }
+.field {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-  /* チャットページ */
-  .user-image img { 
-    height: 40px;
-    width: 40px;
-    object-fit: cover;
-    border-radius: 150px;
-    border: 1px solid #ddd;
-    background-color: #fff;
-    margin-right: 5px;
-  }
+.input-comment {
+  width: 70%;
+  margin-top: 5px;
+  height: 48px;
+  padding: 10px 16px 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background: #fff;
+  font-size: 16px;
+  resize: none;
+}
 
-  .bms_send {
-    margin-bottom: 60px;
-  }
+#comment_content.input-comment {
+  width: 350px;
+  height: 50px;
+}
 
-  .form__btn_send {
-    display: inline-block;
-    height: 48px;
-    padding: 0.2em 0.8em;
-    font-size: 0.8em;
-    color: #fff;
-    user-select: none;
-    background-color: #2988BC;
-    border: 1px #2988BC solid;
-    border-radius: 3px;
-    box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 2px 0 rgba(0, 0, 0, 0.12);
-    transition: 0.2s ease;
-    width: 10%;
-    min-width: 70px;
-    text-align: center;
-  }
+.comment-left {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  border-bottom: 1px solid #f5f5f5;
+}
 
-  .bms_messages_container {
-    height: 70vh;
-    width: auto;
-    background-color: #eee;
-    margin-bottom: 60px;
-  }
-  
-  .bms_chat_header {
-    padding: 6px;
-    font-size: 16px;
-    height: 34px;
-    background: #ddd;
-    border: 1px solid #ccc;
-  }
-  
-  .bms_messages {
-    overflow: auto;
-    height:100%;
-    width: 100%;
-    border-right: 1px solid #ddd;
-    border-left: 1px solid #ddd;
-    background-color: #eee;
-    box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.2) inset;
-  }
+.user-nickname {
+  margin-bottom: 10px;
+  color: black;
+}
+
+.user-introduce {
+  color: black;
 }
