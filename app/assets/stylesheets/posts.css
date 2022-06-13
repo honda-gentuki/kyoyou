@@ -383,6 +383,9 @@ color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.post-show-image img {
   width: 100%;
 }
 
