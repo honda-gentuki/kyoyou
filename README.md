@@ -5,7 +5,7 @@
 ### 教員の業務時間削減を目的とした業務教YOU(共有)アプリ。
 
 # URL
-https://kyoyou.herokuapp.com/
+http://kyoyou.site/
 
 # テスト用アカウント
 Basic認証ID：takutoo<br>
@@ -41,9 +41,12 @@ https://docs.google.com/spreadsheets/d/11dfzMkYT1b7q02jN6W7dYq7yp11eQOAG65TMmG8V
 - 部活指導動投稿機能
 - pdf投稿機能
 - チャット画像投稿機能
-- AWS
+- コントローラー単体テストコード
+- 結合テストコード
+- Action Cableを用いたチャット機能
 - Docker
 - CircleCI
+
 
 # データベース設計
 ![KYOYOU_ER図](https://user-images.githubusercontent.com/100074969/171890006-c446dedd-72b2-44c8-a3b6-0fced81bdd82.png)
@@ -70,8 +73,6 @@ https://docs.google.com/spreadsheets/d/11dfzMkYT1b7q02jN6W7dYq7yp11eQOAG65TMmG8V
 - EC2
 - RDS
 - Route53
-- ALB
-- ACM
 - RSpec
 - Docker/Docker-compose
 - CircleCi 自動テスト
