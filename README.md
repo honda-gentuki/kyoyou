@@ -47,6 +47,8 @@ https://docs.google.com/spreadsheets/d/11dfzMkYT1b7q02jN6W7dYq7yp11eQOAG65TMmG8V
 - Docker
 - CircleCI
 
+# インフラ構成図
+[![Image from Gyazo](https://i.gyazo.com/9fa64066fe13703deb88f3441f3d96e4.png)](https://gyazo.com/9fa64066fe13703deb88f3441f3d96e4)
 
 # データベース設計
 ![KYOYOU_ER図](https://user-images.githubusercontent.com/100074969/171890006-c446dedd-72b2-44c8-a3b6-0fced81bdd82.png)
