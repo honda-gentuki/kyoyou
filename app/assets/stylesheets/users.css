@@ -7,6 +7,10 @@
 }
 
 /* プロフィール左 */
+.profile-left {
+  margin-right: 30px;
+}
+
 .user-profile {
   display: flex;
   margin-bottom: 36px;
@@ -88,7 +92,6 @@
 /* プロフィール右 */
 .profile-right {
   width: 100vw;
-  margin-left: 30px;
 }
 
 .table {
