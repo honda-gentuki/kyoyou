@@ -57,7 +57,7 @@ https://docs.google.com/spreadsheets/d/11dfzMkYT1b7q02jN6W7dYq7yp11eQOAG65TMmG8V
 - CircleCI
 
 # インフラ構成図
-[![Image from Gyazo](https://i.gyazo.com/9fa64066fe13703deb88f3441f3d96e4.png)](https://gyazo.com/9fa64066fe13703deb88f3441f3d96e4)
+[![Image from Gyazo](https://i.gyazo.com/6ed1b7ffa274b9064cccbb2a9e81d9da.png)](https://gyazo.com/6ed1b7ffa274b9064cccbb2a9e81d9da)
 
 # データベース設計
 ![KYOYOU_ER図](https://user-images.githubusercontent.com/100074969/171890006-c446dedd-72b2-44c8-a3b6-0fced81bdd82.png)
