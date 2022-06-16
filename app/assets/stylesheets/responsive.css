@@ -412,7 +412,7 @@
 
   #user_age.input-name {
     font-size: 10px;
-    width: 50%;
+    width: 70%;
   }
 
   #post_unit.input-default {
@@ -448,6 +448,33 @@
   }
 
   /* 新規登録 */
+  .form-info-header {
+    font-size: 16px;
+  }
+
+  .form-info-text {
+    font-size: 10px;
+  }
+
+  #user_last_name.input-name {
+    width: 70%;
+  }
+
+  #user_first_name.input-name {
+    width: 70%;
+  }
+
+  #user_last_name_kana.input-name {
+    width: 70%;
+  }
+  #user_first_name_kana.input-name {
+    width: 70%;
+  }
+
+  #user_sex.input-name {
+    font-size: 10px;
+    width: 100%;
+  }
 
   .input-default::placeholder {
     font-size: 8px;
@@ -461,4 +488,19 @@
     font-size: 8px;
   } 
 
+  #user_sex.input-name {
+    font-size: 10px;
+    width: 70%;
+  }
+
+.form img {
+  height: 250px;
+  width: 250px;
+  object-fit: cover;
+  border-radius: 150px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  margin-right: 15px;
+  margin-left: 15px;
+}
 }
