@@ -449,4 +449,16 @@
 
   /* 新規登録 */
 
+  .input-default::placeholder {
+    font-size: 8px;
+  } 
+
+  .input-name::placeholder {
+    font-size: 8px;
+  } 
+
+  .input-class::placeholder {
+    font-size: 8px;
+  } 
+
 }
