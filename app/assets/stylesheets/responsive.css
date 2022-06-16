@@ -400,4 +400,43 @@
   #post_images {
     font-size: 10px;
   }
+
+  .form-group {
+    font-size: 12px;
+  }
+
+  #user_age {
+    font-size: 12px;
+  }
+
+
+  #post_unit.input-default {
+    font-size: 12px;
+  }
+
+  #post_course.input-default {
+    font-size: 12px;
+  }
+
+  #post_introduction.input-class {
+    font-size: 12px;
+  }
+
+  #post_development.input-class {
+    font-size: 12px;
+  }
+
+  #post_summary.input-class {
+    font-size: 12px;
+  }
+
+  #post_introduction_time.input-name {
+    font-size: 12px;
+  }
+  #post_development_time.input-name {
+    font-size: 12px;
+  }
+  #post_summary_time.input-name {
+    font-size: 12px;
+  }
 }
