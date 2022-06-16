@@ -41,6 +41,7 @@ document.addEventListener('DOMContentLoaded', function(){
     const newFileField = document.createElement('input');
     newFileField.setAttribute('type', 'file');
     newFileField.setAttribute('name', 'post_form[images][]');
+    newFileField.setAttribute('id', 'post_images');
     
     // 最後のfile_fieldを取得
     const lastFileField = document.querySelector('input[type="file"][name="post_form[images][]"]:last-child');
