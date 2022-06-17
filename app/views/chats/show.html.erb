@@ -45,20 +45,13 @@
           <% @chats.each do |chat| %>
             <% if chat.user_id == current_user.id %>
               <div class="bms_message bms_right">
-                  <div class="bms_message_box">
-                      <div class="bms_message_content">
-                          <div class="bms_message_text">
-                            <div style="text-align: left" id='message'><%= chat.message %></div>
-                          </div>
-                      </div>
-                  </div>
-                <%
-=begin%>
- <div class="already__read">
-                  <%= @read ? '既読' : '未読' %>
-                </div> 
-<%
-=end%>
+                <div class="bms_message_box">
+                    <div class="bms_message_content">
+                        <div class="bms_message_text">
+                          <div style="text-align: left" id='message'><%= chat.message %></div>
+                        </div>
+                    </div>
+                </div>
               </div>
               <div class="bms_clear"></div>
             <% else %>
