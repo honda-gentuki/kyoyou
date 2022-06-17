@@ -1,17 +1,34 @@
-/* タブレット表示 */
-@media (max-width: 1024px) {
-  .inner {
-    width: 90%;
-    margin: 0 auto; 
+ /* スマホ表示 */
+@media (max-width: 599px) {
+  /* common */
+  .main {
+    width: 100vw;
+    overflow: hidden;
+  }
+  
+  .wrap {
+    min-width: 100vw;
+  }
+
+  .breadcrumbs {
+    background-color: #f4eade;
+    padding: 10px 0 10px 10px;
+    font-size: 10px;
   }
 
   .page-heading {
-    font-size: 24px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    height: 30px;
   }
-}
 
- /* スマホ表示 */
-@media (max-width: 599px) {
+  .greeting {
+    margin-left: 5px;
+  }
+
   /* ヘッダー */
   .header {
     width: 100vw;
@@ -69,11 +86,16 @@
     justify-content: center;
     align-items: center;
     height: 33px;
+
   }
 
   .input-search {
     height: 33px;
     margin: 0 5px;
+  }
+
+  #post_form_tag_name.input-search {
+    margin: 0 3px 0 0;
   }
 
   .search-btn {
@@ -97,7 +119,7 @@
   }
 
     /* トップページ */
-    .title-contents {
+  .title-contents {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -115,17 +137,6 @@
     font-size: 16px;
     height: 30px;
   }
-
-  .page-heading {
-    font-size: 18px;
-    height: 30px;
-  }
-
-  .breadcrumbs {
-    background-color: #f4eade;
-    padding: 10px  20px 10px;
-    font-size: 10px;
-  }
   
   .feature-list-text::after {
     display: none;
@@ -134,13 +145,6 @@
   .feature-list-description {
     font-size: 18px;
     margin: 0 auto;
-  }
-
-  .page-heading {
-    margin-bottom: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
 
   .list {
@@ -190,7 +194,23 @@
     display: none;
   }
 
+  .slick-track {
+    width: 100%;
+  }
+
   .slick-arrow {
+    display: none;
+  }
+
+  .slider.slick-initialized.slick-slider.slick-dotted {
+    min-width: 100%;
+  }
+
+  .slick-next.slick-arrow::before{
+    display: none;
+  }
+
+  .slick-next.slick-arrow::after{
     display: none;
   }
 
@@ -270,6 +290,7 @@
   .myself-user {
     font-size: 8px;
   }
+
   .bms_message {
     font-size: 8px;
   }
@@ -278,122 +299,280 @@
     font-size: 8px;
   }
 
-     /* ユーザー詳細ページ */
-     .main {
-      width: 100vw;
-    }
+    /* ユーザー詳細ページ */
+  .page-heading-show {
+    font-size: 18px;
+  }
   
-    .page-heading-show {
-      font-size: 18px;
-    }
-    
-    .user-profile {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-    }
-  
-    .profile-card {
-      margin: 0 auto;
-    }
-  
-    .profile-left {
-      width: 100%;
-      margin: 0 auto;
+  .user-profile {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
 
-    }
-    
-    .profile-right {
-      width: 100%;
-      margin-left: 0;
-      margin-top: 50px;
-    }
+  .profile-card {
+    margin: 0 auto;
+  }
+
+  .profile-left {
+    width: 100%;
+    margin: 0 auto;
+
+  }
   
-    .table {
-      border-collapse: collapse;
-      margin-bottom: 32px;
-      width: 100%;
-      height: 400px;
-      margin: 0 auto;
-    }
-    
-    .table tbody {
-      box-shadow: 15px 20px 20px #ccc;
-    }
-    
-    .table__col1 {
-      text-align: left;
-      font-weight: bold;
-      background: #fafafa;
-      border-collapse: collapse;
-      border: 1px solid #ddd;
-      width: 20%;
-      padding: 8px;
-      height: 20%;
-      font-size: 12px;
-    }
-    
-    .table__col2 {
-      text-align: left;
-      border: 1px solid #ddd;
-      border-collapse: collapse;
-      background-color: #f2f2f2;
-      width: 80%;
-      padding: 8px;
-      font-size: 12px;
-    }
-    
-    .table__col3{
-      text-align: left;
-      font-weight: bold;
-      background: #fafafa;
-      border-collapse: collapse;
-      border: 1px solid #ddd;
-      width: 20%;
-      padding: 8px;
-      font-size: 12px;
-    }
-    
-    .table__col4{
-      text-align: left;
-      border: 1px solid #ddd;
-      border-collapse: collapse;
-      background-color: #f2f2f2;
-      width: 80%;
-      padding: 8px;
-      font-size: 12px;
-    }
+  .profile-right {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 50px;
+  }
+
+  .table {
+    border-collapse: collapse;
+    margin-bottom: 32px;
+    width: 100%;
+    height: 400px;
+    margin: 0 auto;
+  }
   
-    /* ログイン */
-    .wrap {
-      width: 100%;
-      height: 100%;
-      background-color: white;
-      margin: 20px 0 40px 0;
-    }
+  .table tbody {
+    box-shadow: 15px 20px 20px #ccc;
+  }
   
-    #error_explanation h2{
-      font-size: 15px;
-    }
+  .table__col1 {
+    text-align: left;
+    font-weight: bold;
+    background: #fafafa;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+    width: 20%;
+    padding: 8px;
+    height: 20%;
+    font-size: 12px;
+  }
   
-    #error_explanation  ul{
-      font-size: 12px;
-    }
+  .table__col2 {
+    text-align: left;
+    border: 1px solid #ddd;
+    border-collapse: collapse;
+    background-color: #f2f2f2;
+    width: 80%;
+    padding: 8px;
+    font-size: 12px;
+  }
   
-    .chat-header {
-      margin: 20px 0;
-    }
+  .table__col3 {
+    text-align: left;
+    font-weight: bold;
+    background: #fafafa;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+    width: 20%;
+    padding: 8px;
+    font-size: 12px;
+  }
   
-    .your_container {
-      height: 70%;
-      width: 80%;
-    }
+  .table__col4 {
+    text-align: left;
+    border: 1px solid #ddd;
+    border-collapse: collapse;
+    background-color: #f2f2f2;
+    width: 80%;
+    padding: 8px;
+    font-size: 12px;
+  }
+
+  /* ログイン */
+  #error_explanation h2 {
+    font-size: 15px;
+  }
+
+  #error_explanation  ul {
+    font-size: 12px;
+  }
+
+  .chat-header {
+    margin: 20px 0;
+  }
+
+  .chat_container {
+    height: 70%;
+    min-width: 100%;
+  }
+
+  .user-name {
+    font-size: 15px;
+    margin-right: 5px;
+    color: black;
+  }
+
+  /* 投稿編集 */
+  #post_images {
+    font-size: 10px;
+  }
+
+  .form-group {
+    font-size: 10px;
+  }
+
+  #user_age.input-name {
+    font-size: 10px;
+    width: 70%;
+  }
+
+  #post_unit.input-default {
+    font-size: 12px;
+  }
+
+  #post_course.input-default {
+    font-size: 12px;
+  }
+
+  #post_introduction.input-class {
+    font-size: 12px;
+  }
+
+  #post_development.input-class {
+    font-size: 12px;
+  }
+
+  #post_summary.input-class {
+    font-size: 12px;
+  }
+
+  #post_introduction_time.input-name {
+    font-size: 12px;
+  }
+
+  #post_development_time.input-name {
+    font-size: 12px;
+  }
+
+  #post_summary_time.input-name {
+    font-size: 12px;
+  }
+
+  /* 新規登録 */
+  .form-info-header {
+    font-size: 16px;
+  }
+
+  .form-info-text {
+    font-size: 10px;
+  }
+
+  #user_last_name.input-name {
+    width: 70%;
+  }
+
+  #user_first_name.input-name {
+    width: 70%;
+  }
+
+  #user_last_name_kana.input-name {
+    width: 70%;
+  }
+  #user_first_name_kana.input-name {
+    width: 70%;
+  }
+
+  #user_sex.input-name {
+    font-size: 10px;
+    width: 100%;
+  }
+
+  .input-default::placeholder {
+    font-size: 8px;
+  } 
+
+  .input-name::placeholder {
+    font-size: 8px;
+  } 
+
+  .input-class::placeholder {
+    font-size: 8px;
+  } 
+
+  #user_sex.input-name {
+    font-size: 10px;
+    width: 70%;
+  }
+
+  .form img {
+    height: 250px;
+    width: 250px;
+    object-fit: cover;
+    border-radius: 150px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    margin-right: 15px;
+    margin-left: 15px;
+  }
+
+  #user_nickname.input-default {
+    font-size: 12px;
+  }
+
+  #user_shool.input-default {
+    font-size: 12px;
+  }
+
+  #user_subject.input-default {
+    font-size: 12px;
+  }
+
+  #user_club.input-default {
+    font-size: 12px;
+  }
   
-    .user-name {
-      font-size: 10px;
-      margin-right: 5px;
-      color: black;
-    }
+  #user_introduce.input-class {
+    font-size: 12px;
+  }
+
+  /* 投稿詳細 */
+  .post__show__title {
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .table__col5 {
+    font-size: 12px;
+  }
+
+  .table__col6 {
+    font-size: 12px;
+  }
+
+  .table__col7 {
+    font-size: 12px;
+  }
+
+  .table__col8 {
+    font-size: 12px;
+  }
+
+  .table__col9 {
+    font-size: 12px;
+  }
+
+  .table__col10 {
+    font-size: 12px;
+  }
+
+  .br-sp {
+    display: block; 
+  }
+
+  .slider img {
+    margin:0 auto;
+    height: auto;
+    width: auto;
+  }
+
+  /* フォロー一覧ページ */
+  .follow-right {
+    margin-left: 15px;
+    font-size: 12px;
+  }
 }

@@ -1,4 +1,8 @@
 /* 投稿・投稿カード */
+.br-sp {
+  display: none; 
+}
+
 .card-wrap {
   display: grid;
   gap: 26px;
@@ -40,6 +44,7 @@
   padding: 16px;
   align-items: center;
   justify-content: center;
+  width: 100%;
 }
 
 .user-image img{ 
@@ -66,7 +71,8 @@
 
 .user-name {
   color: black;
-  width: 70%;
+  width: 65%;
+  font-size: 12px;
 }
 
 .post-edit {
@@ -375,7 +381,7 @@ color: #fff;
 
 .post-image img {
   height: 500px;
-  max-width: 100%;
+  max-width: 100vw;
   margin: 0 auto;
 }
 
@@ -385,8 +391,8 @@ color: #fff;
   align-items: center;
 }
 
-.post-show-image img {
-  width: 100%;
+.post-show-image img{
+  max-width: 100%;
 }
 
 .previews {
