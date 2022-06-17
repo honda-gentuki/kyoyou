@@ -375,9 +375,9 @@
     margin: 20px 0;
   }
 
-  .your_container {
+  .chat_container {
     height: 70%;
-    width: 80%;
+    min-width: 100%;
   }
 
   .user-name {
