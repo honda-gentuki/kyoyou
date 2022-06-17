@@ -3,6 +3,7 @@
   /* common */
   .main {
     width: 100vw;
+    overflow: hidden;
   }
   
   .wrap {
@@ -193,7 +194,23 @@
     display: none;
   }
 
+  .slick-track {
+    width: 100%;
+  }
+
   .slick-arrow {
+    display: none;
+  }
+
+  .slider.slick-initialized.slick-slider.slick-dotted {
+    min-width: 100%;
+  }
+
+  .slick-next.slick-arrow::before{
+    display: none;
+  }
+
+  .slick-next.slick-arrow::after{
     display: none;
   }
 
@@ -385,7 +402,7 @@
   }
 
   .user-name {
-    font-size: 10px;
+    font-size: 15px;
     margin-right: 5px;
     color: black;
   }
@@ -511,6 +528,46 @@
   
   #user_introduce.input-class {
     font-size: 12px;
+  }
+
+  /* 投稿詳細 */
+  .post__show__title {
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .table__col5 {
+    font-size: 12px;
+  }
+
+  .table__col6 {
+    font-size: 12px;
+  }
+
+  .table__col7 {
+    font-size: 12px;
+  }
+
+  .table__col8 {
+    font-size: 12px;
+  }
+
+  .table__col9 {
+    font-size: 12px;
+  }
+
+  .table__col10 {
+    font-size: 12px;
+  }
+
+  .br-sp {
+    display: block; 
+  }
+
+  .slider img {
+    margin:0 auto;
+    height: auto;
+    width: auto;
   }
 
   /* フォロー一覧ページ */
