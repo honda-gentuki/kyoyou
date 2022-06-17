@@ -12,6 +12,30 @@
 
  /* スマホ表示 */
 @media (max-width: 599px) {
+  /* common */
+  .main {
+    width: 100vw;
+  }
+  
+  .wrap {
+    min-width: 100vw;
+  }
+
+  .breadcrumbs {
+    background-color: #f4eade;
+    padding: 10px 0 10px 10px;
+    font-size: 10px;
+  }
+
+  .page-heading {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    height: 30px;
+  }
+
   /* ヘッダー */
   .header {
     width: 100vw;
@@ -102,7 +126,7 @@
   }
 
     /* トップページ */
-    .title-contents {
+  .title-contents {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -120,17 +144,6 @@
     font-size: 16px;
     height: 30px;
   }
-
-  .page-heading {
-    font-size: 18px;
-    height: 30px;
-  }
-
-  .breadcrumbs {
-    background-color: #f4eade;
-    padding: 10px  20px 10px;
-    font-size: 10px;
-  }
   
   .feature-list-text::after {
     display: none;
@@ -139,13 +152,6 @@
   .feature-list-description {
     font-size: 18px;
     margin: 0 auto;
-  }
-
-  .page-heading {
-    margin-bottom: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
 
   .list {
@@ -267,6 +273,7 @@
   .chat-user-name {
     font-size: 8px;
   }
+
   .chat-user-name {
     width: 100%;
   }
@@ -274,6 +281,7 @@
   .myself-user {
     font-size: 8px;
   }
+
   .bms_message {
     font-size: 8px;
   }
@@ -283,10 +291,6 @@
   }
 
     /* ユーザー詳細ページ */
-    .main {
-    width: 100vw;
-  }
-
   .page-heading-show {
     font-size: 18px;
   }
@@ -349,7 +353,7 @@
     font-size: 12px;
   }
   
-  .table__col3{
+  .table__col3 {
     text-align: left;
     font-weight: bold;
     background: #fafafa;
@@ -360,7 +364,7 @@
     font-size: 12px;
   }
   
-  .table__col4{
+  .table__col4 {
     text-align: left;
     border: 1px solid #ddd;
     border-collapse: collapse;
@@ -371,18 +375,11 @@
   }
 
   /* ログイン */
-  .wrap {
-    width: 100%;
-    height: 100%;
-    background-color: white;
-    margin: 20px 0 40px 0;
-  }
-
-  #error_explanation h2{
+  #error_explanation h2 {
     font-size: 15px;
   }
 
-  #error_explanation  ul{
+  #error_explanation  ul {
     font-size: 12px;
   }
 
@@ -493,14 +490,40 @@
     width: 70%;
   }
 
-.form img {
-  height: 250px;
-  width: 250px;
-  object-fit: cover;
-  border-radius: 150px;
-  border: 1px solid #ddd;
-  background-color: #fff;
-  margin-right: 15px;
-  margin-left: 15px;
-}
+  .form img {
+    height: 250px;
+    width: 250px;
+    object-fit: cover;
+    border-radius: 150px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    margin-right: 15px;
+    margin-left: 15px;
+  }
+
+  #user_nickname.input-default {
+    font-size: 12px;
+  }
+
+  #user_shool.input-default {
+    font-size: 12px;
+  }
+
+  #user_subject.input-default {
+    font-size: 12px;
+  }
+
+  #user_club.input-default {
+    font-size: 12px;
+  }
+  
+  #user_introduce.input-class {
+    font-size: 12px;
+  }
+
+  /* フォロー一覧ページ */
+  .follow-right {
+    margin-left: 15px;
+    font-size: 12px;
+  }
 }
