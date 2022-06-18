@@ -7,6 +7,7 @@ RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - \
 WORKDIR /kyoyou
 COPY Gemfile /kyoyou/Gemfile
 COPY Gemfile.lock /kyoyou/Gemfile.lock
+RUN gem install bundler
 RUN bundle install
 COPY . /kyoyou
 
