@@ -68,19 +68,19 @@ https://docs.google.com/spreadsheets/d/11dfzMkYT1b7q02jN6W7dYq7yp11eQOAG65TMmG8V
 
 # 開発環境
 **コーディング** <br>
-- HTML / CSS<br>
+HTML / CSS<br>
 **フロントエンド** <br>
-- JavaScript / jQuery<br>
+JavaScript / jQuery<br>
 **バックエンド** <br>
-- Ruby（Ruby on Rails）<br>
+Ruby（Ruby on Rails）<br>
 **インフラ** <br>
-- MySQL / AWS / Heroku / Docker / CircleCI /  Nginx<br>
+MySQL / AWS / Heroku / Docker / CircleCI /  Nginx<br>
 **テスト** <br>
-- RSpec<br>
+RSpec<br>
 **テキストエディタ** <br>
-- VScode<br>
+VScode<br>
 **タスク管理** <br>
-- GitHub / Slack<br>
+GitHub / Slack<br>
 
 # 使用技術
 - Ruby 2.6.5
@@ -95,6 +95,10 @@ https://docs.google.com/spreadsheets/d/11dfzMkYT1b7q02jN6W7dYq7yp11eQOAG65TMmG8V
 - RSpec
 - Docker/Docker-compose
 - CircleCi 自動テスト
+
+:::note alert
+開発環境/使用技術には今後実装予定のものも含みます。
+:::
 
 # ローカルでの動作方法※
 % git clone https://github.com/honda-gentuki/kyoyou.git <br>
