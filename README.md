@@ -68,19 +68,19 @@ https://docs.google.com/spreadsheets/d/11dfzMkYT1b7q02jN6W7dYq7yp11eQOAG65TMmG8V
 
 # 開発環境
 **コーディング** <br>
-- HTML / CSS
+- HTML / CSS<br>
 **フロントエンド** <br>
-- JavaScript / jQuery
+- JavaScript / jQuery<br>
 **バックエンド** <br>
-- Ruby（Ruby on Rails）
+- Ruby（Ruby on Rails）<br>
 **インフラ** <br>
-- MySQL / AWS / Heroku / Docker / CircleCI
+- MySQL / AWS / Heroku / Docker / CircleCI /  Nginx<br>
 **テスト** <br>
-- RSpec
+- RSpec<br>
 **テキストエディタ** <br>
-- VScode
+- VScode<br>
 **タスク管理** <br>
-- GitHub / Slack
+- GitHub / Slack<br>
 
 # 使用技術
 - Ruby 2.6.5
