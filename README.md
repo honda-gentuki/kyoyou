@@ -1,5 +1,5 @@
 # アプリケーション名
-### 教YOU
+### 教YOU[![Image from Gyazo](https://i.gyazo.com/d837df221d335c2ab86554a3354c0d39.jpg)](https://gyazo.com/d837df221d335c2ab86554a3354c0d39)
 
 # アプリケーション概要
 ### 教員の業務時間削減を目的とした業務教YOU(共有)アプリ。
