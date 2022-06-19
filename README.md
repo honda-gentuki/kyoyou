@@ -53,7 +53,7 @@ https://docs.google.com/spreadsheets/d/11dfzMkYT1b7q02jN6W7dYq7yp11eQOAG65TMmG8V
 - コントローラー単体テストコード
 - 結合テストコード
 - Action Cableを用いたチャット機能
-- Docker
+- Dockerの導入
 - CircleCI
 
 # インフラ構成図
@@ -67,12 +67,20 @@ https://docs.google.com/spreadsheets/d/11dfzMkYT1b7q02jN6W7dYq7yp11eQOAG65TMmG8V
 ![教YOU＿画面遷移図](https://user-images.githubusercontent.com/100074969/171888907-9d82ad4b-5880-4f96-80d9-84e374e765ac.png)
 
 # 開発環境
-- フロントエンド
-- バックエンド
-- インフラ
-- テスト
-- テキストエディタ
-- タスク管理
+**コーディング**
+HTML / CSS
+**フロントエンド**
+JavaScript / jQuery
+**バックエンド**
+Ruby（Ruby on Rails）
+**インフラ**
+MySQL / AWS / Heroku / Docker / CircleCI
+**テスト**
+RSpec
+**テキストエディタ**
+VScode
+**タスク管理**
+GitHub / Slack
 
 # 使用技術
 - Ruby 2.6.5
