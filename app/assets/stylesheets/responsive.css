@@ -29,31 +29,33 @@
     margin-left: 5px;
   }
 
+
   /* ヘッダー */
   .header {
     width: 100vw;
   }
 
   .nav {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
-    flex-wrap: wrap;
+    display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
-    width: 100%;
+    width: 100vw;
     margin: 0 auto;
   }
 
   .nav-left {
-    width: 100%;
+    width: 30%;
   }
 
   .nav-right {
     display: flex;
     justify-content: center;
     align-items: center;
-    order: 1;
+    width: 30%;
+  }
+
+  .bi.bi-list {
+    margin-right: 20px;
   }
 
   .nav-left a {
@@ -76,7 +78,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    order: 3;
   }
 
   .search_form {
@@ -112,13 +113,7 @@
     margin-bottom: 60px;
   }
 
-  .menu1-lists {
-    position: absolute;
-    top:  40px;
-    left: -60px;
-  }
-
-    /* トップページ */
+  /* トップページ */
   .title-contents {
     display: flex;
     flex-direction: column;
@@ -129,8 +124,9 @@
     margin-bottom: 20px;
   }
 
-  .service-title {  
-    font-size: 21px;
+  h2.service-title {  
+    font-size: 4vh;
+    font-weight: 200;
   }
   
   .service-explain {
@@ -574,5 +570,14 @@
   .follow-right {
     margin-left: 15px;
     font-size: 12px;
+  }
+
+  /* ハンバーガー */
+  .nav-right {
+    display: none!important;
+  }
+
+  #open {
+    display: block!important;
   }
 }
