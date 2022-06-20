@@ -364,6 +364,7 @@
 
 .btn-bell i {
   color: white;
+  cursor: pointer;
 }
 
 .btn-user:hover {
@@ -372,6 +373,7 @@
 
 .btn-user i {
   color: white;
+  cursor: pointer;
 }
 
 .size {
@@ -389,7 +391,6 @@
 
 .menu1-lists {
   position: absolute;
-  z-index: 10;
 }
 
 .menu1-lists li {
@@ -406,7 +407,7 @@
 }
 
 .menu1-lists li:hover {
-opacity: 0.9;
+  opacity: 0.9;
 }
 
 .menu1-lists a {
@@ -435,6 +436,82 @@ opacity: 0.9;
   top: 15px;
   left: 15px;
 }
+
+/* ハンバーガーメニュー */
+.bi-list {
+  color: white;
+  cursor: pointer;
+}
+
+#open.hide {
+  display: none;
+}
+
+.bi-list:hover {
+  opacity: 0.5;
+}
+
+.bi-x-square {
+  color: black;
+  cursor: pointer;
+}
+
+.bi-x-square:hover {
+  opacity: 0.5;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.95);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .6s;
+  z-index: 10;
+}
+
+.overlay.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.overlay #close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  font-size: 32px;
+}
+
+.over ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.overlay li {
+  margin-top: 24px;
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity .3s, transform .3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.overlay.show li {
+  opacity: 1;
+  transform: none;
+  font-size: 24px;
+}
+
+.overlay.show li a {
+  color: black;
+}
+
 
 /* フッター */
 .footer {
