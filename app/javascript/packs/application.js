@@ -13,6 +13,7 @@ require("../menu")
 require("../chat")
 require("../slick")
 require("../slick.min")
+require("../humburger")
 //= require rails-ujs
 
 // Uncomment to copy all static images under ../images to the output folder and reference
