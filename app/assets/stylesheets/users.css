@@ -40,7 +40,7 @@
   font-size: 15px
 }
 
-.card-image img{
+.card-image img {
   height: 250px;
   width: 250px;
   object-fit: cover;
@@ -127,7 +127,7 @@
   padding: 16px 15px;
 }
 
-.table__col3{
+.table__col3 {
   white-space: pre-wrap;
   text-align: left;
   font-weight: bold;
@@ -138,7 +138,7 @@
   padding: 8px 8px 8px 15px;
 }
 
-.table__col4{
+.table__col4 {
   white-space: pre-wrap;
   text-align: left;
   border: 1px solid #ddd;

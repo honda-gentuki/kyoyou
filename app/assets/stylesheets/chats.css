@@ -12,7 +12,7 @@
   align-items: center;
 }
 
-.chat-user-image img{ 
+.chat-user-image img { 
   height: 57px;
   width: 57px;
   object-fit: cover;

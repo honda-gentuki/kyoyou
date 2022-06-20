@@ -206,11 +206,11 @@
     min-width: 100%;
   }
 
-  .slick-next.slick-arrow::before{
+  .slick-next.slick-arrow::before {
     display: none;
   }
 
-  .slick-next.slick-arrow::after{
+  .slick-next.slick-arrow::after {
     display: none;
   }
 
