@@ -2,12 +2,12 @@
   <i class="bi bi-x-square size" id="close"></i> 
   <ul>
     <li><%= link_to 'マイページ', user_path(current_user) %></li>
-    <li><%= link_to '通知', notifications_path %></li>
-    <li><%= link_to '投稿する', new_post_path %></li>
-    <li><%= link_to 'チャットルーム', chats_path %></li>
-    <li><%= link_to 'いいね',  "/users/#{current_user.id}/likes" %></li>
-    <li><%= link_to 'フォロー', following_user_path(current_user)  %></li>
-    <li><%= link_to 'フォロワー', followers_user_path(current_user) %></li>
+    <li><%= link_to '投稿ページ', new_post_path %></li>
+    <li><%= link_to '通知一覧ページ', notifications_path %></li>
+    <li><%= link_to 'チャット一覧ページ', chats_path %></li>
+    <li><%= link_to 'いいね一覧ページ',  "/users/#{current_user.id}/likes" %></li>
+    <li><%= link_to 'フォロー一覧ページ', following_user_path(current_user)  %></li>
+    <li><%= link_to 'フォロワー一覧ページ', followers_user_path(current_user) %></li>
     <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
   </ul>
 </div>
