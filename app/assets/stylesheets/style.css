@@ -391,6 +391,8 @@
 
 .menu1-lists {
   position: absolute;
+  top: 45px;
+  right: 10px;
 }
 
 .menu1-lists li {

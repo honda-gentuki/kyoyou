@@ -13,7 +13,6 @@
           <%end%>
         <% end %>
       </div>
-          
       <% if user_signed_in? %>
         <div class="nav-right">
           <%= link_to "投稿", new_post_path, class:"nav-btn" %>
@@ -36,7 +35,6 @@
                   <i class="bi bi-person-circle size"></i>
                   <i class="bi bi-caret-down-fill"></i>
                 </div>
-                
                 <ul class="menu1-lists hidden" id="menu1-pull-down">
                   <li><%= link_to 'マイページ', user_path(current_user) %></li>
                   <li><%= link_to 'チャットルーム', chats_path %></li>
@@ -45,16 +43,11 @@
                   <li><%= link_to 'フォロワー', followers_user_path(current_user) %></li>
                   <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
                 </ul>
-                <i class="bi bi-list" id="open"></i>
-                <%
-=begin%>
- <i class="bi bi-x-square" id="close"></i> 
-<%
-=end%>
               </li>
             </ul>
           </div>
         </div>
+         <i class="bi bi-list size" id="open"></i>
       <% else %>
         <div class="nav-right">
           <%= link_to "ログイン", new_user_session_path, class:"nav-btn" %>
