@@ -12,21 +12,21 @@ RSpec.describe Chat, type: :model do
       end
     end
 
-     context 'チャットが投稿できない場合' do
+    context 'チャットが投稿できない場合' do
       it 'チャットが空では送信できない' do
         @chat.message = ''
         @chat.valid?
-        expect(@chat.errors.full_messages).to include("メッセージを入力してください")
+        expect(@chat.errors.full_messages).to include('メッセージを入力してください')
       end
       it 'ユーザーが紐付いていないと保存できない' do
         @chat.user = nil
         @chat.valid?
-        expect(@chat.errors.full_messages).to include("ユーザーを入力してください")
+        expect(@chat.errors.full_messages).to include('ユーザーを入力してください')
       end
       it 'チャットルームが紐付いていないと送信できない' do
         @chat.room = nil
         @chat.valid?
-        expect(@chat.errors.full_messages).to include("チャットルームを入力してください")
+        expect(@chat.errors.full_messages).to include('チャットルームを入力してください')
       end
     end
   end
