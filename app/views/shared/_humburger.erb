@@ -1,4 +1,5 @@
- <div class="overlay">
+ <% if user_signed_in? %>
+<div class="overlay">
   <i class="bi bi-x-square size" id="close"></i> 
   <ul>
     <li><%= link_to 'マイページ', user_path(current_user) %></li>
@@ -11,3 +12,4 @@
     <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
   </ul>
 </div>
+<% end %>
